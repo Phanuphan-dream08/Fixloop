@@ -1,0 +1,30 @@
+
+{
+  "name": "fixloop",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node --experimental-strip-types server.mjs",
+    "build": "next build",
+    "start": "node --experimental-strip-types server.mjs",
+    "lint": "next lint",
+    "test": "node --experimental-strip-types --test test/fixloop.test.mjs"
+  },
+  "dependencies": {
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@supabase/supabase-js": "^2.45.4",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.16.11",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "@types/qrcode": "^1.5.5",
+    "tailwindcss": "^3.4.13",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20"
+  }
+}

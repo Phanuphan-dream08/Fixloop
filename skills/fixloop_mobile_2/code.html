@@ -1,0 +1,324 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><style class="">html, body, button, input, textarea, select, h1, h2, h3, h4, h5, h6, p, span:not(.material-symbols-outlined), a:not(.material-symbols-outlined), label { font-family: 'Noto Sans Thai', sans-serif !important; }</style><title>FixLoop</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link class="" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link class="" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-variant": "#e5e2e1", "on-primary-fixed": "#001453", "on-secondary": "#ffffff", "primary-container": "#2457f5", "on-secondary-fixed-variant": "#564500", "surface-tint": "#0f4ceb", "on-error-container": "#93000a", "inverse-primary": "#b8c4ff", "surface-container-low": "#f6f3f2", "surface-container-lowest": "#ffffff", "surface-bright": "#fcf9f8", "on-surface-variant": "#434656", "surface-dim": "#dcd9d9", "inverse-on-surface": "#f3f0ef", "on-background": "#1c1b1b", "background": "#fcf9f8", "on-tertiary": "#ffffff", "surface": "#fcf9f8", "on-surface": "#1c1b1b", "secondary-container": "#fed74c", "inverse-surface": "#313030", "on-tertiary-container": "#8fffa1", "error": "#ba1a1a", "on-primary-fixed-variant": "#0037b9", "primary-fixed": "#dde1ff", "secondary-fixed": "#ffe07e", "error-container": "#ffdad6", "secondary": "#725c00", "surface-container-high": "#eae7e7", "outline": "#747687", "tertiary-fixed": "#7ffc97", "tertiary-fixed-dim": "#62df7d", "on-primary-container": "#e4e6ff", "on-secondary-fixed": "#231b00", "secondary-fixed-dim": "#e9c339", "outline-variant": "#c4c5d8", "tertiary-container": "#007833", "on-tertiary-fixed": "#002109", "surface-container-highest": "#e5e2e1", "on-error": "#ffffff", "surface-container": "#f0eded", "on-secondary-container": "#735d00", "primary-fixed-dim": "#b8c4ff", "on-primary": "#ffffff", "tertiary": "#005d25", "primary": "#003ece", "on-tertiary-fixed-variant": "#005320" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "margin": "1rem", "margin-tablet": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem" }, fontFamily: { "headline-lg-mobile": ["Space Grotesk"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "body-xl": ["Plus Jakarta Sans"], "headline-xl": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Space Grotesk"] }, fontSize: { "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-xl": ["20px", { "lineHeight": "32px", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen" style="font-family: &quot;Noto Sans Thai&quot;, sans-serif;"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center"><img alt="FixLoop" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WN0AcfgdsIjo9582ZW6z5KYnwgD_Tv9wWhYjACMIHk5re7r74YUn4v9786uLtQ-rss2LrNMlRfuwvPZ4UFsAn2fIUto96QwXs6iKGioRoNMdR2G0wIG6InDjzKrEFmqyidkfqdtMNPF9uf9juakD0igrYRckbTHRGYryXAI4NIdSwsKpWzOuMe8Fu4ujDqQWmx5zplGxLk027E-5jeIb7tmO9LCvtPADGVpht37yo-X4fcCic8ahGmLw"></div><div class="flex items-center gap-space-sm"><button aria-label="Toggle Easy-Read or Language" class="min-h-[44px] min-w-[44px] px-space-xs py-space-xs bg-surface-container flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container-high transition-colors"><div class="flex items-center gap-1 px-1"><svg class="w-5 h-3.5 rounded-[2px] shadow-sm overflow-hidden shrink-0" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"><rect fill="#A51931" height="600" width="900"></rect><rect fill="#F4F5F8" height="400" width="900" y="100"></rect><rect fill="#2D2A4A" height="200" width="900" y="200"></rect></svg><span class="font-label-sm text-label-sm font-bold text-on-surface leading-none">TH</span></div></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter pb-8 gap-space-lg">
+<!-- Senior / High Contrast Banner Mode Switch -->
+<div class="w-full bg-secondary-container text-on-secondary-container p-space-md rounded-lg shadow-md flex items-center justify-between gap-space-sm mt-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[26px] text-secondary shrink-0">bolt</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm font-bold truncate">แจ้งไว ใส่ใจชุมชน</span>
+<span class="font-body-sm text-body-sm leading-tight text-on-secondary-variant">ระบบส่งตรงถึงกองช่าง เทศบาลนครสมุทรปราการ 24 ชม.</span>
+</div>
+</div>
+<button aria-pressed="false" class="shrink-0 bg-surface text-on-surface px-space-sm py-space-xs rounded font-label-sm text-label-sm shadow-sm flex items-center gap-1 active:scale-95 transition-transform" id="seniorToggleBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">elderly</span>
+<span class="" id="seniorToggleLabel">โหมดตัวโต</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-lg w-full" id="issueReportForm" onsubmit="event.preventDefault(); submitReport();">
+<!-- STEP 1: Category Selection -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">เลือกหมวดหมู่ปัญหา</h2>
+</div>
+<span class="font-label-sm text-label-sm text-error font-bold">* จำเป็น</span>
+</div>
+<div aria-label="หมวดหมู่ปัญหา" class="grid grid-cols-2 gap-space-sm w-full" id="categoryGrid" role="radiogroup">
+<!-- Category Card 1 -->
+<button aria-checked="true" class="category-card selected flex flex-col items-center justify-center p-space-md bg-primary-fixed text-on-primary-fixed rounded-lg shadow-md text-center gap-space-xs transition-all active:translate-y-0.5" data-cat="road" role="radio" type="button">
+<span class="material-symbols-outlined text-[34px] text-primary" style="font-variation-settings: 'FILL' 1;">alt_route</span>
+<span class="font-label-md text-label-md font-bold leading-snug">หลุมถนน / ทางเท้า</span>
+<span class="font-label-sm text-label-sm opacity-80">ชำรุด แตกร้าว ยุบตัว</span>
+</button>
+<!-- Category Card 2 -->
+<button aria-checked="false" class="category-card flex flex-col items-center justify-center p-space-md bg-surface-container text-on-surface rounded-lg shadow-sm text-center gap-space-xs transition-all active:translate-y-0.5 hover:bg-surface-container-high" data-cat="light" role="radio" type="button">
+<span class="material-symbols-outlined text-[34px] text-on-surface-variant">lightbulb</span>
+<span class="font-label-md text-label-md font-bold leading-snug">ไฟทางดับ</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">มืด เสี่ยงอันตราย</span>
+</button>
+<!-- Category Card 3 -->
+<button aria-checked="false" class="category-card flex flex-col items-center justify-center p-space-md bg-surface-container text-on-surface rounded-lg shadow-sm text-center gap-space-xs transition-all active:translate-y-0.5 hover:bg-surface-container-high" data-cat="waste" role="radio" type="button">
+<span class="material-symbols-outlined text-[34px] text-on-surface-variant">delete</span>
+<span class="font-label-md text-label-md font-bold leading-snug">ขยะตกค้าง</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ส่งกลิ่น ล้นถัง กองทิ้ง</span>
+</button>
+<!-- Category Card 4 -->
+<button aria-checked="false" class="category-card flex flex-col items-center justify-center p-space-md bg-surface-container text-on-surface rounded-lg shadow-sm text-center gap-space-xs transition-all active:translate-y-0.5 hover:bg-surface-container-high" data-cat="drain" role="radio" type="button">
+<span class="material-symbols-outlined text-[34px] text-on-surface-variant">water_damage</span>
+<span class="font-label-md text-label-md font-bold leading-snug">ท่อระบายน้ำอุดตัน</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">น้ำท่วมขัง ฝาท่อพัง</span>
+</button>
+<!-- Category Card 5 -->
+<button aria-checked="false" class="category-card flex flex-col items-center justify-center p-space-md bg-surface-container text-on-surface rounded-lg shadow-sm text-center gap-space-xs transition-all active:translate-y-0.5 hover:bg-surface-container-high" data-cat="cable" role="radio" type="button">
+<span class="material-symbols-outlined text-[34px] text-on-surface-variant">electrical_services</span>
+<span class="font-label-md text-label-md font-bold leading-snug">สายไฟ / กิ่งไม้พาด</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ห้อยต่ำ เสี่ยงเกี่ยวรถ</span>
+</button>
+<!-- Category Card 6 -->
+<button aria-checked="false" class="category-card flex flex-col items-center justify-center p-space-md bg-surface-container text-on-surface rounded-lg shadow-sm text-center gap-space-xs transition-all active:translate-y-0.5 hover:bg-surface-container-high" data-cat="other" role="radio" type="button">
+<span class="material-symbols-outlined text-[34px] text-on-surface-variant">more_horiz</span>
+<span class="font-label-md text-label-md font-bold leading-snug">ปัญหาอื่นๆ</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">เสียงดัง ก่อสร้าง อื่นๆ</span>
+</button>
+</div>
+</section>
+<!-- STEP 2: Voice or Text Description -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">อธิบายปัญหา</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">กดพูดหรือพิมพ์ก็ได้</span>
+</div>
+<!-- Giant Voice Recording Mic Area -->
+<div class="w-full bg-surface-container p-space-md rounded-lg flex flex-col items-center justify-center gap-space-sm text-center shadow-sm">
+<button class="w-20 h-20 rounded-full bg-primary-container text-on-primary flex flex-col items-center justify-center shadow-lg active:scale-90 transition-transform focus:outline-none" id="micBtn" type="button">
+<span class="material-symbols-outlined text-[36px]" id="micIcon">mic</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary" id="micStatusText">แตะที่นี่เพื่อพูดแทนการพิมพ์ (รองรับภาษาไทย)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ระบบถอดข้อความอัตโนมัติ สะดวกสำหรับผู้สูงอายุ</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="issueDetails">ข้อความรายละเอียด</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface p-space-md rounded-lg font-body-md text-body-md shadow-sm focus:bg-surface-bright focus:outline-none placeholder:text-on-surface-variant/60" id="issueDetails" placeholder="ระบุอาการ ขนาดของปัญหา หรือเหตุการณ์เพิ่มเติม..." rows="3">ถนนเป็นหลุมลึกประมาณ 15 ซม. รถจักรยานยนต์เกือบล้มหลายคัน น้ำขังมองไม่เห็นปากหลุม</textarea>
+</div>
+</section>
+<!-- STEP 3: Photo Upload with Preview -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">แนบรูปถ่ายหลักฐาน</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">ถ่ายชัดเจนช่วยเร่งงาน</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Photo Camera Box (Live Preview) -->
+<div class="relative w-full h-36 bg-surface-container-high rounded-lg overflow-hidden shadow-sm flex flex-col items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Clear high-contrast photograph of a damaged asphalt road with a dangerous deep pothole filled with rain water on a sunny Bangkok street sidewalk edge" id="previewImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCixFFwFjgybUVOpAVz1Fc_mpCNJhk7COzCojKgxxAhklrmFHZsIlg_9pLBBqkZLthJmcbFpGcw3z0jx1BwOUAYwRcRolgbJUGz45AR1Q21GLRy8QQgbILYgpT3IcHShMoIMovWwmA8n701IP3JokhR8lc26DeAdYfzl8MRBb-fiwhRTPhmRcwgAg-JoBxFQzqatPhvuG0SA1PE3TsN6zYlhWwaRlW-RKRtZJQOmRtCLrfCMN37ybWe">
+<div class="absolute bottom-1 right-1 bg-surface-dim/90 px-1.5 py-0.5 rounded text-on-surface font-label-sm text-label-sm shadow flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span class="">ถ่ายแล้ว</span>
+</div>
+</div>
+<!-- Add Extra Photo or Retake Button -->
+<label class="w-full h-36 bg-surface-container-lowest rounded-lg shadow-sm flex flex-col items-center justify-center gap-space-xs text-center p-space-xs cursor-pointer hover:bg-surface-container transition-colors">
+<input accept="image/*" capture="environment" class="hidden" id="cameraInput" onchange="handlePhotoCapture(event)" type="file">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">add_a_photo</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">ถ่ายรูปใหม่ / เพิ่มรูป</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ได้สูงสุด 3 รูป</span>
+</label>
+</div>
+</section>
+<!-- STEP 4: GPS Auto-Location & Landmark -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">ตำแหน่งพิกัดที่เกิดเหตุ</h2>
+</div>
+<span class="font-label-sm text-label-sm text-error font-bold">* จำเป็น</span>
+</div>
+<!-- GPS Button -->
+<button class="w-full min-h-[52px] bg-tertiary text-on-tertiary px-space-md py-space-sm rounded-lg shadow-md font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm active:translate-y-0.5 transition-all" id="gpsFetchBtn" onclick="triggerGpsScan()" type="button">
+<span class="material-symbols-outlined text-[24px]" id="gpsIcon">my_location</span>
+<span class="" id="gpsButtonText">กดเพื่อระบุตำแหน่งของฉัน (GPS)</span>
+</button>
+<!-- Map Snapshot Container -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden shadow-sm bg-surface-variant">
+<div class="w-full h-full bg-cover bg-center" data-location="Rama 9 Road, Huai Khwang, Bangkok, Thailand" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnvrSQwwNsUcUNTltEYkTZtqE-Mv5GvxTLa53YFTrWt1SVsy0F4kL-5atZOXeKt_YQtMbHOH8N6Lr3oxa2HFSkgcAu4OUSzROayetbyxWxFpeU1DfStMttr6-GZQzzzuOEZV1Wqf7FF5TgH9DZQ_L8DVRZptJTXIPcBwJgjlMiexJF3Nuwe-B5YM6tL54xFoFl7KSdCXWFQhRtv-54sMPqABnpqO-gmMZytyliWh3SCP0_K28fwkU0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-end p-space-sm text-on-secondary">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">pin_drop</span>
+<span class="font-label-md text-label-md font-bold text-white">ถ.สุขุมวิท ซอยเทศบาลบางปู 45 (อ.เมืองสมุทรปราการ)</span>
+</div>
+<span class="font-label-sm text-label-sm text-white/90">พิกัด 13.7548° N, 100.5698° E (ความแม่นยำ 4 เมตร)</span>
+</div>
+</div>
+<!-- Landmark input -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="landmarkInput">จุดสังเกตใกล้เคียง (ช่วยให้เจ้าหน้าที่หาเจอไว)</label>
+<input class="w-full min-h-[48px] bg-surface-container-lowest text-on-surface px-space-md py-space-xs rounded-lg font-body-md text-body-md shadow-sm focus:bg-surface-bright focus:outline-none" id="landmarkInput" placeholder="หน้าเซเว่นอีเลฟเว่น สาขาปากซอยเทศบาลบางปู 45 หรือ ตลาดปากน้ำ" type="text" value="หน้าเซเว่นอีเลฟเว่น สาขาปากซอยเทศบาลบางปู 45 หรือ ตลาดปากน้ำ">
+</div>
+</section>
+<!-- STEP 5: Phone Number for Notification -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">5</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">เบอร์โทรศัพท์รับอัปเดต SMS</h2>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="relative flex items-center">
+<span class="absolute left-3 material-symbols-outlined text-[22px] text-on-surface-variant">phone_iphone</span>
+<input class="w-full min-h-[52px] pl-11 pr-space-md py-space-xs bg-surface-container-lowest text-on-surface rounded-lg font-headline-sm text-headline-sm shadow-sm tracking-wider focus:outline-none" id="contactPhone" inputmode="numeric" maxlength="10" placeholder="08X-XXX-XXXX" type="tel" value="0891234567">
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+          ระบบจะส่งลิงก์ตรวจสถานะการแก้ไขผ่าน SMS ฟรี ไม่คิดค่าบริการ
+        </span>
+</div>
+</section>
+<!-- Big Civic Brutalist Submit Button -->
+<div class="w-full pt-space-xs flex flex-col gap-space-xs">
+<button class="w-full min-h-[58px] bg-primary text-on-primary rounded-lg shadow-xl font-headline-md text-headline-md font-bold tracking-tight flex items-center justify-center gap-space-sm active:translate-y-1 transition-all" id="submitBtn" type="submit">
+<span class="material-symbols-outlined text-[26px]">send</span>
+<span class="">ส่งเรื่องแจ้งปัญหาทันที (ฟรี)</span>
+</button>
+<span class="text-center font-label-sm text-label-sm text-on-surface-variant">ข้อมูลจะถูกบันทึกลงระบบส่วนกลาง FixLoop และแจ้งเทศบาล/อบต. ใน จ.สมุทรปราการ ทันที</span>
+</div>
+</form>
+<!-- Emergency Quick Call Box -->
+<div class="w-full bg-error-container text-on-error-container p-space-md rounded-lg shadow-md flex flex-col gap-space-sm mt-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[24px] text-error font-bold">warning</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-error">กรณีเกิดเหตุฉุกเฉินด่วนถึงชีวิต</h3>
+</div>
+<span class="font-body-sm text-body-sm leading-relaxed">
+      หากเป็นอุบัติเหตุมีผู้บาดเจ็บ หรือเพลิงไหม้ โปรดโทรเบอร์ฉุกเฉินแห่งชาติทันที:
+    </span>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs"><a class="min-h-[50px] bg-surface text-error rounded-lg shadow-sm flex items-center justify-center gap-space-xs px-space-sm font-label-lg text-label-lg font-bold active:scale-95 transition-transform" href="tel:023890211"><span class="material-symbols-outlined text-[22px]">local_fire_department</span><span class="">02-389-0211 ดับเพลิงปากน้ำ</span></a><a class="min-h-[50px] bg-surface text-error rounded-lg shadow-sm flex items-center justify-center gap-space-xs px-space-sm font-label-lg text-label-lg font-bold active:scale-95 transition-transform" href="tel:1669"><span class="material-symbols-outlined text-[22px]">medical_services</span><span class="">1669 กู้ชีพสมุทรปราการ</span></a></div>
+</div>
+<!-- Notification Toast Modal Simulation -->
+<div class="hidden fixed inset-0 z-50 bg-on-background/70 backdrop-blur-sm flex items-center justify-center p-gutter" id="successModal">
+<div class="bg-surface text-on-surface w-full max-w-sm p-space-lg rounded-xl shadow-2xl flex flex-col items-center text-center gap-space-md">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[40px]">check_circle</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface">บันทึกเรื่องสำเร็จ!</h4>
+<span class="font-label-md text-label-md text-primary font-bold">รหัสติดตาม: #FX-68041</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">เจ้าหน้าที่ฝ่ายโยธาได้รับพิกัดแล้ว ระบบได้ส่ง SMS ยืนยันไปยังเบอร์ของท่าน</p>
+</div>
+<button class="w-full min-h-[48px] bg-primary text-on-primary font-label-lg text-label-lg font-bold rounded-lg shadow-md active:translate-y-0.5" onclick="closeModal()" type="button">
+        ติดตามสถานะเรื่องนี้
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Category Radio Selection
+  const categoryCards = document.querySelectorAll('.category-card');
+  categoryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      categoryCards.forEach(c => {
+        c.classList.remove('selected', 'bg-primary-fixed', 'text-on-primary-fixed');
+        c.classList.add('bg-surface-container', 'text-on-surface');
+        c.setAttribute('aria-checked', 'false');
+        const icon = c.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.classList.remove('text-primary');
+          icon.classList.add('text-on-surface-variant');
+          icon.style.fontVariationSettings = "'FILL' 0";
+        }
+      });
+      card.classList.remove('bg-surface-container', 'text-on-surface');
+      card.classList.add('selected', 'bg-primary-fixed', 'text-on-primary-fixed');
+      card.setAttribute('aria-checked', 'true');
+      const activeIcon = card.querySelector('.material-symbols-outlined');
+      if (activeIcon) {
+        activeIcon.classList.remove('text-on-surface-variant');
+        activeIcon.classList.add('text-primary');
+        activeIcon.style.fontVariationSettings = "'FILL' 1";
+      }
+    });
+  });
+
+  // Senior Mode Toggle
+  const seniorBtn = document.getElementById('seniorToggleBtn');
+  const seniorLabel = document.getElementById('seniorToggleLabel');
+  let isSenior = false;
+
+  seniorBtn.addEventListener('click', () => {
+    isSenior = !isSenior;
+    seniorBtn.setAttribute('aria-pressed', isSenior ? 'true' : 'false');
+    if (isSenior) {
+      document.body.classList.add('text-lg');
+      seniorLabel.textContent = 'โหมดปกติ';
+      seniorBtn.classList.add('bg-primary', 'text-on-primary');
+      seniorBtn.classList.remove('bg-surface', 'text-on-surface');
+    } else {
+      document.body.classList.remove('text-lg');
+      seniorLabel.textContent = 'โหมดตัวโต';
+      seniorBtn.classList.remove('bg-primary', 'text-on-primary');
+      seniorBtn.classList.add('bg-surface', 'text-on-surface');
+    }
+  });
+
+  // Audio mic recording simulator
+  const micBtn = document.getElementById('micBtn');
+  const micStatus = document.getElementById('micStatusText');
+  const issueDetails = document.getElementById('issueDetails');
+  let isRecording = false;
+
+  micBtn.addEventListener('click', () => {
+    isRecording = !isRecording;
+    if (isRecording) {
+      micBtn.classList.remove('bg-primary-container');
+      micBtn.classList.add('bg-error', 'animate-pulse');
+      micStatus.textContent = '● กำลังฟังเสียงของคุณ... พูดได้เลยครับ';
+      micStatus.classList.remove('text-primary');
+      micStatus.classList.add('text-error');
+      setTimeout(() => {
+        if (isRecording) {
+          issueDetails.value += " (ข้อความเสียง: ท่อข้างถนนมีน้ำขังสีดำ ส่งกลิ่นเหม็นมากครับ)";
+          micBtn.click();
+        }
+      }, 3000);
+    } else {
+      micBtn.classList.remove('bg-error', 'animate-pulse');
+      micBtn.classList.add('bg-primary-container');
+      micStatus.textContent = '✓ บันทึกและถอดเสียงเป็นตัวอักษรแล้ว';
+      micStatus.classList.remove('text-error');
+      micStatus.classList.add('text-tertiary');
+    }
+  });
+
+  // GPS Refresh simulation
+  function triggerGpsScan() {
+    const gpsBtn = document.getElementById('gpsButtonText');
+    const icon = document.getElementById('gpsIcon');
+    gpsBtn.textContent = 'กำลังค้นหาตำแหน่งดาวเทียม...';
+    icon.classList.add('animate-spin');
+    setTimeout(() => {
+      gpsBtn.textContent = '✓ ระบุพิกัดสำเร็จ (ถ.พระราม 9 ซอย 13)';
+      icon.classList.remove('animate-spin');
+      icon.textContent = 'check_circle';
+    }, 1000);
+  }
+
+  // Camera mock handler
+  function handlePhotoCapture(e) {
+    if (e.target.files && e.target.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        document.getElementById('previewImg').src = evt.target.result;
+      }
+      reader.readAsDataURL(e.target.files[0]);
+    }
+  }
+
+  // Submission Modal
+  function submitReport() {
+    const modal = document.getElementById('successModal');
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('successModal');
+    modal.classList.add('hidden');
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] min-h-[48px] px-space-sm transition-colors text-primary font-bold" data-path="home-and-report" href="#"><span class="material-symbols-outlined text-[24px]">report</span><span class="font-label-sm text-label-sm">Report</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] min-h-[48px] px-space-sm text-on-surface-variant transition-colors" data-path="track-status" href="#"><span class="material-symbols-outlined text-[24px]">checklist_rtl</span><span class="font-label-sm text-label-sm">Track</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] min-h-[48px] px-space-sm text-on-surface-variant transition-colors" data-path="emergency-and-hotlines" href="#"><span class="material-symbols-outlined text-[24px]">emergency</span><span class="font-label-sm text-label-sm">Hotlines</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] min-h-[48px] px-space-sm text-on-surface-variant transition-colors" data-path="community-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm">Hub</span></a></div></nav>
+
+
+</body></html>

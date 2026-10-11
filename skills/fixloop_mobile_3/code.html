@@ -1,0 +1,290 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><title>FixLoop</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link class="" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-variant": "#e5e2e1", "on-primary-fixed": "#001453", "on-secondary": "#ffffff", "primary-container": "#2457f5", "on-secondary-fixed-variant": "#564500", "surface-tint": "#0f4ceb", "on-error-container": "#93000a", "inverse-primary": "#b8c4ff", "surface-container-low": "#f6f3f2", "surface-container-lowest": "#ffffff", "surface-bright": "#fcf9f8", "on-surface-variant": "#434656", "surface-dim": "#dcd9d9", "inverse-on-surface": "#f3f0ef", "on-background": "#1c1b1b", "background": "#fcf9f8", "on-tertiary": "#ffffff", "surface": "#fcf9f8", "on-surface": "#1c1b1b", "secondary-container": "#fed74c", "inverse-surface": "#313030", "on-tertiary-container": "#8fffa1", "error": "#ba1a1a", "on-primary-fixed-variant": "#0037b9", "primary-fixed": "#dde1ff", "secondary-fixed": "#ffe07e", "error-container": "#ffdad6", "secondary": "#725c00", "surface-container-high": "#eae7e7", "outline": "#747687", "tertiary-fixed": "#7ffc97", "tertiary-fixed-dim": "#62df7d", "on-primary-container": "#e4e6ff", "on-secondary-fixed": "#231b00", "secondary-fixed-dim": "#e9c339", "outline-variant": "#c4c5d8", "tertiary-container": "#007833", "on-tertiary-fixed": "#002109", "surface-container-highest": "#e5e2e1", "on-error": "#ffffff", "surface-container": "#f0eded", "on-secondary-container": "#735d00", "primary-fixed-dim": "#b8c4ff", "on-primary": "#ffffff", "tertiary": "#005d25", "primary": "#003ece", "on-tertiary-fixed-variant": "#005320" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "margin": "1rem", "margin-tablet": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem" }, fontFamily: { "headline-lg-mobile": ["Space Grotesk"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "body-xl": ["Plus Jakarta Sans"], "headline-xl": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Space Grotesk"] }, fontSize: { "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-xl": ["20px", { "lineHeight": "32px", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style class="">body, h1, h2, h3, h4, h5, h6, p, span:not(.material-symbols-outlined), a, button, div, input, select, textarea { font-family: 'Noto Sans Thai', sans-serif !important; } .material-symbols-outlined { font-family: 'Material Symbols Outlined' !important; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center"><img alt="FixLoop" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WN0AcfgdsIjo9582ZW6z5KYnwgD_Tv9wWhYjACMIHk5re7r74YUn4v9786uLtQ-rss2LrNMlRfuwvPZ4UFsAn2fIUto96QwXs6iKGioRoNMdR2G0wIG6InDjzKrEFmqyidkfqdtMNPF9uf9juakD0igrYRckbTHRGYryXAI4NIdSwsKpWzOuMe8Fu4ujDqQWmx5zplGxLk027E-5jeIb7tmO9LCvtPADGVpht37yo-X4fcCic8ahGmLw"></div><div class="flex items-center gap-space-sm"><button aria-label="เปลี่ยนภาษา / Change Language" class="min-h-[44px] min-w-[44px] px-space-xs py-space-xs bg-surface-container flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">flag</span><span class="font-label-sm text-label-sm ml-space-xs">TH</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter space-y-space-md pb-12">
+<!-- Search Section -->
+<section class="bg-surface-container-lowest p-space-md rounded-lg shadow-[4px_4px_0px_0px_#1A1A1A] space-y-space-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-space-xs" for="tracking-input" style="font-family: &quot;Noto Sans Thai&quot;, sans-serif;">
+<span class="material-symbols-outlined text-primary text-[20px]">search_check</span>
+        ค้นหาสถานะเรื่องร้องเรียน
+      </label>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+        อัปเดตเรียลไทม์
+      </span>
+</div>
+<div class="space-y-space-xs">
+<div class="relative">
+<input class="w-full min-h-[52px] px-space-md py-space-sm bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm rounded-lg focus:outline-none focus:bg-surface-bright shadow-[inset_0px_2px_4px_rgba(0,0,0,0.06)]" id="tracking-input" placeholder="ใส่รหัสเรื่อง (เช่น FIX-...) หรือเบอร์โทรศัพท์" type="text" value="FIX-2025-08492">
+<button aria-label="ล้างข้อความ" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface active:scale-95 transition-transform" id="clear-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+        ค้นหาได้ทั้งรหัสคำร้อง 14 หลัก หรือเบอร์มือถือที่ใช้แจ้งเรื่อง
+      </p>
+</div>
+<button class="w-full min-h-[48px] bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-[4px_4px_0px_0px_#1A1A1A] active:translate-x-1 active:translate-y-1 active:shadow-none flex items-center justify-center gap-space-xs transition-all" id="search-btn">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span class="">ค้นหาเรื่องร้องเรียน</span>
+</button>
+</section>
+<!-- Active Case Header Card -->
+<section class="bg-surface-container-lowest p-space-md rounded-lg shadow-[4px_4px_0px_0px_#1A1A1A] space-y-space-md">
+<!-- Status Badge & Ticket ID -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold tracking-wider text-on-primary-container bg-primary-container px-2.5 py-1 rounded text-on-primary">
+          #FIX-2025-08492
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 14 นาทีที่แล้ว
+        </span>
+</div>
+<!-- High-contrast Neon Status Badge -->
+<div class="bg-secondary-container text-on-secondary-fixed p-space-sm rounded flex items-center justify-between shadow-[2px_2px_0px_0px_#1A1A1A]">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[24px] text-on-secondary-fixed font-bold">build</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase opacity-80 leading-none">สถานะปัจจุบัน</span>
+<span class="font-headline-sm text-headline-sm leading-tight font-bold">กำลังดำเนินการซ่อมแซม 🔧</span>
+</div>
+</div>
+<span class="w-3.5 h-3.5 rounded-full bg-error animate-ping mr-1"></span>
+</div>
+</div>
+<!-- Stepper & Progress Bar -->
+<div class="space-y-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">ความคืบหน้างานโยธา</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">70%</span>
+</div>
+<!-- Progress Bar Track -->
+<div class="w-full h-4 bg-surface-variant rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-primary-container rounded-full transition-all duration-700 ease-out" style="width: 70%;"></div>
+</div>
+<!-- 4-step Stepper -->
+<div class="grid grid-cols-4 gap-1 pt-space-xs text-center">
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-primary flex items-center justify-center shadow-[1px_1px_0px_0px_#1A1A1A]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">รับเรื่องแล้ว</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">09:12 น.</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-primary flex items-center justify-center shadow-[1px_1px_0px_0px_#1A1A1A]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">ส่งช่างเขต</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">11:30 น.</span>
+</div>
+<!-- Step 3 (Active) -->
+<div class="flex flex-col items-center gap-1">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center ring-2 ring-primary ring-offset-2 shadow-[2px_2px_0px_0px_#1A1A1A]">
+<span class="material-symbols-outlined text-[16px] animate-spin">autorenew</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold leading-tight">กำลังซ่อม</span>
+<span class="font-label-sm text-label-sm text-primary text-[10px]">กำลังทำ</span>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center gap-1 opacity-45">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface leading-tight">เสร็จสิ้น</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">รอตรวจ</span>
+</div>
+</div>
+</div>
+<!-- Issue Details Card -->
+<div class="space-y-space-sm">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-[24px] mt-0.5">report_problem</span>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+            ฝาท่อระบายน้ำชำรุด แตกหัก
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            ฝาคอนกรีตทรุดตัวลึกประมาณ 30 ซม. เสี่ยงคนเดินเท้าและมอเตอร์ไซค์ตกท่อกลางคืน
+          </p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-2 pt-2 text-on-surface">
+<div class="flex items-center gap-space-xs bg-surface-container p-space-sm rounded">
+<span class="material-symbols-outlined text-primary text-[20px]">pin_drop</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">พิกัดจุดเกิดเหตุ</span>
+<span class="font-label-md text-label-md truncate font-bold">ถนนท้ายบ้าน ซอย 12 (ตำบลปากน้ำ อ.เมืองสมุทรปราการ)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container p-space-sm rounded">
+<span class="material-symbols-outlined text-tertiary text-[20px]">corporate_fare</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">หน่วยงานรับผิดชอบ</span>
+<span class="font-label-md text-label-md truncate font-bold">กองช่าง เทศบาลนครสมุทรปราการ</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Photo Comparison: Side-by-Side (Before & During) -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">หลักฐานภาพถ่ายหน้างาน</span>
+<span class="font-label-sm text-label-sm text-primary">2 ภาพล่าสุด</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Before Photo -->
+<div class="relative bg-surface-container rounded-lg overflow-hidden shadow-[2px_2px_0px_0px_#1A1A1A]">
+<img class="w-full h-36 object-cover" data-alt="Close-up documentary shot of a cracked and collapsed concrete storm drain cover on a Bangkok asphalt road with exposed rusty rebar, harsh tropical sunlight, marked with emergency warning cones, realistic photojournalism civic issue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1iFKQkoWJmAxR1EdH4nA9Fng6dhWtz7xwwMdePCf0ma67lcWMSoofTnELLSaD5fW0Hkh7coQhtO8suA1nBznLITmx1yhemmVbuvJYCZXCDr5q-R6gqwSIR4C_IPPLgE1DOwvkzp8lTxnsURtOY7ZphTpzO7q3N7tvcj1qawsnJ-pXaOkrNixQ8w8UhUIGMZwUr0KYSwP0Ve4QZIQrL9uj1W_uD8lBc-xS--ToqdZlqt3hpigs-gZU">
+<div class="absolute top-2 left-2 bg-inverse-surface/90 text-inverse-on-surface px-1.5 py-0.5 rounded text-[10px] font-label-sm">
+            ก่อนซ่อม (Before)
+          </div>
+<div class="absolute bottom-1 inset-x-1 bg-surface-bright/95 text-on-surface px-1.5 py-0.5 rounded text-[9px] font-label-sm truncate shadow">
+            📅 12 ก.พ. 08:45 น.
+          </div>
+</div>
+<!-- During Repair Photo -->
+<div class="relative bg-surface-container rounded-lg overflow-hidden shadow-[2px_2px_0px_0px_#1A1A1A]">
+<img class="w-full h-36 object-cover" data-alt="Civil workers wearing bright orange high-visibility safety vests installing a reinforced heavy-duty cast iron drain grille replacement on a city street sidewalk, daytime construction scene, tools and barrier visible, authentic municipal repair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdjYR3kdLIYsoaX57L516zF5R_ONVb8Cg54Ieb3Wc5yuLV2d3zYj5huCjxR46TLc8xqWHBgrVIiiGq_9PMK20ynmlIXtAQMB9glKABNac8cZ_34Wnlo60-ZWRBQW4mB8eWoJ2q_6CYwuYD3JUjcy7czgXk_VAjdWUU8rK1xkFwlESd093KCxaV_yMWcah29rgE4-MIlbdkjPCwELjjgqEUY_xYFEPGZeJQ5T1DK7QaTMJ_50ApoNNE">
+<div class="absolute top-2 left-2 bg-secondary-container text-on-secondary-fixed px-1.5 py-0.5 rounded text-[10px] font-label-sm font-bold">
+            กำลังซ่อม (During)
+          </div>
+<div class="absolute bottom-1 inset-x-1 bg-surface-bright/95 text-on-surface px-1.5 py-0.5 rounded text-[9px] font-label-sm truncate shadow">
+            📅 วันนี้ 13:10 น. (ช่างเขต)
+          </div>
+</div>
+</div>
+</div>
+<!-- Civic Verification & Community Endorsement Bar -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between gap-space-xs shadow-[2px_2px_0px_0px_#1A1A1A]">
+<div class="flex items-center gap-2 pl-1">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-[10px] font-bold text-on-primary-fixed">พ</div>
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-[10px] font-bold text-on-secondary-fixed">ส</div>
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center text-[10px] font-bold text-on-tertiary-fixed">น</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold leading-tight">
+<span class="text-primary text-[15px] font-headline-sm" id="endorse-count">42</span> คนในชุมชน
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">ยืนยันปัญหานี้</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-3 py-2 rounded font-label-md text-label-md shadow-[2px_2px_0px_0px_#1A1A1A] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none flex items-center gap-1 transition-all" id="witness-btn">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span class="">+1 ร่วมเป็นพยาน</span>
+</button>
+</div>
+<!-- Quick Civic Utility Action Buttons -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+<!-- Read Aloud (Accessibility) -->
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container text-on-surface rounded-lg shadow-[2px_2px_0px_0px_#1A1A1A] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all group" id="tts-button">
+<span class="material-symbols-outlined text-primary text-[24px] group-hover:scale-110 transition-transform">volume_up</span>
+<span class="font-label-sm text-label-sm mt-1 text-center font-bold">อ่านให้ฟัง</span>
+</button>
+<!-- Call District Office Directly -->
+<a class="flex flex-col items-center justify-center p-2.5 bg-surface-container text-on-surface rounded-lg shadow-[2px_2px_0px_0px_#1A1A1A] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all group" href="tel:022794140">
+<span class="material-symbols-outlined text-tertiary text-[24px] group-hover:scale-110 transition-transform">call</span>
+<span class="font-label-sm text-label-sm mt-1 text-center font-bold">โทรหากองช่าง</span>
+</a>
+<!-- Share / Export Document -->
+<button class="flex flex-col items-center justify-center p-2.5 bg-surface-container text-on-surface rounded-lg shadow-[2px_2px_0px_0px_#1A1A1A] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all group" id="share-btn">
+<span class="material-symbols-outlined text-on-surface-variant text-[24px] group-hover:scale-110 transition-transform">print</span>
+<span class="font-label-sm text-label-sm mt-1 text-center font-bold">พิมพ์/แชร์</span>
+</button>
+</div>
+</section>
+<!-- Inspector / Field Team Note -->
+<section class="bg-surface-container p-space-md rounded-lg shadow-[4px_4px_0px_0px_#1A1A1A] space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[18px]">engineering</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold leading-tight">บันทึกนายช่างควบคุมงาน (เทศบาลนครสมุทรปราการ)</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">นายสมชาย ใจมั่นคง • ทีมกองช่าง เทศบาลนครสมุทรปราการ</p>
+</div>
+</div>
+<div class="bg-surface-bright p-space-sm rounded text-on-surface font-body-sm text-body-sm leading-relaxed">
+      "นำแผ่นเหล็กหนามาปิดกั้นชั่วคราวเพื่อความปลอดภัยแล้ว ขณะนี้กำลังหล่อคานขอบท่อใหม่ คาดว่าจะแห้งและเปิดผิวจราจรได้ภายใน 18:00 น. วันนี้ครับ"
+    </div>
+</section>
+</div>
+<script>
+  // Quick Micro-interactions for Civic Delight
+  const witnessBtn = document.getElementById('witness-btn');
+  const countEl = document.getElementById('endorse-count');
+  let hasWitnessed = false;
+
+  witnessBtn.addEventListener('click', () => {
+    let current = parseInt(countEl.textContent, 10);
+    if (!hasWitnessed) {
+      countEl.textContent = current + 1;
+      witnessBtn.classList.replace('bg-primary', 'bg-tertiary');
+      witnessBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span><span>บันทึกแล้ว!</span>';
+      hasWitnessed = true;
+    } else {
+      countEl.textContent = current - 1;
+      witnessBtn.classList.replace('bg-tertiary', 'bg-primary');
+      witnessBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">thumb_up</span><span>+1 ร่วมเป็นพยาน</span>';
+      hasWitnessed = false;
+    }
+  });
+
+  // Text-To-Speech Reader Simulation / Web Speech API
+  const ttsBtn = document.getElementById('tts-button');
+  ttsBtn.addEventListener('click', () => {
+    const textToSpeak = "เรื่องร้องเรียนเลขที่ FIX-2025-08492 ฝาท่อระบายน้ำชำรุด แตกหัก ถนนพหลโยธิน 8 แยก 3 หน่วยงานรับผิดชอบ สำนักงานเขตพญาไท สถานะปัจจุบัน กำลังดำเนินการซ่อมแซม ความคืบหน้าเจ็ดสิบเปอร์เซ็นต์";
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(textToSpeak);
+      utterance.lang = 'th-TH';
+      utterance.rate = 0.95;
+      window.speechSynthesis.speak(utterance);
+      
+      ttsBtn.classList.add('bg-secondary-container');
+      setTimeout(() => {
+        ttsBtn.classList.remove('bg-secondary-container');
+      }, 3000);
+    } else {
+      alert("ระบบอ่านออกเสียงกำลังทำงาน: " + textToSpeak);
+    }
+  });
+
+  // Clear button helper
+  const clearBtn = document.getElementById('clear-btn');
+  const trackingInput = document.getElementById('tracking-input');
+  clearBtn.addEventListener('click', () => {
+    trackingInput.value = '';
+    trackingInput.focus();
+  });
+
+  // Share action simulation
+  const shareBtn = document.getElementById('share-btn');
+  shareBtn.addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'สถานะเรื่องร้องเรียน FixLoop: FIX-2025-08492',
+          text: 'ติดตามความคืบหน้าการซ่อมแซมฝาท่อ พหลโยธิน 8 แยก 3',
+          url: window.location.href,
+        });
+      } catch (err) {
+        console.log('Share dismissed');
+      }
+    } else {
+      navigator.clipboard.writeText('https://fixloop.bma.go.th/track/FIX-2025-08492');
+      alert('คัดลอกลิงก์สถานะคำร้องเรียบร้อยแล้ว');
+    }
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] min-h-[48px] px-space-sm text-on-surface-variant transition-colors" data-path="home-and-report" href="#"><span class="material-symbols-outlined text-[24px]">report</span><span class="font-label-sm text-label-sm">Report</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] min-h-[48px] px-space-sm transition-colors text-primary font-bold" data-path="track-status" href="#"><span class="material-symbols-outlined text-[24px]">checklist_rtl</span><span class="font-label-sm text-label-sm">Track</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] min-h-[48px] px-space-sm text-on-surface-variant transition-colors" data-path="emergency-and-hotlines" href="#"><span class="material-symbols-outlined text-[24px]">emergency</span><span class="font-label-sm text-label-sm">Hotlines</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[48px] min-h-[48px] px-space-sm text-on-surface-variant transition-colors" data-path="community-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm">Hub</span></a></div></nav>
+
+
+</body></html>

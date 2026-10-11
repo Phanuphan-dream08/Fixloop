@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>FixLoop - ระบบรับเรื่องร้องเรียนเพื่อประชาชน</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link class="" href="https://fonts.googleapis.com/css2?family=Google+Sans+Thai:wght@300;400;500;600;700&amp;family=Google+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"><style>body, body *:not(.material-symbols-outlined):not([class*="material-symbols"]) { font-family: 'Google Sans Thai', 'Google Sans', 'Noto Sans Thai', sans-serif !important; } .material-symbols-outlined { font-family: 'Material Symbols Outlined' !important; font-display: block; }</style><style>@layer base{html,body{margin:0;padding:0;font-family:'Noto Sans Thai','Plus Jakarta Sans',sans-serif;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-background":"#1c1b1b","secondary":"#725c00","primary":"#003ece","surface-bright":"#fcf9f8","outline-variant":"#c4c5d8","inverse-on-surface":"#f3f0ef","on-primary-container":"#e4e6ff","on-surface-variant":"#434656","secondary-container":"#fed74c","surface-container":"#f0eded","on-primary-fixed-variant":"#0037b9","on-tertiary-fixed":"#002109","on-error-container":"#93000a","secondary-fixed":"#ffe07e","error-container":"#ffdad6","primary-fixed-dim":"#b8c4ff","on-primary-fixed":"#001453","outline":"#747687","on-primary":"#ffffff","primary-container":"#2457f5","surface-container-highest":"#e5e2e1","tertiary-fixed":"#7ffc97","secondary-fixed-dim":"#e9c339","inverse-surface":"#313030","surface":"#fcf9f8","on-tertiary-fixed-variant":"#005320","surface-container-high":"#eae7e7","tertiary-container":"#007833","on-tertiary-container":"#8fffa1","on-tertiary":"#ffffff","background":"#fcf9f8","on-secondary-fixed":"#231b00","on-error":"#ffffff","inverse-primary":"#b8c4ff","primary-fixed":"#dde1ff","error":"#ba1a1a","on-secondary-fixed-variant":"#564500","tertiary-fixed-dim":"#62df7d","surface-container-low":"#f6f3f2","on-surface":"#1c1b1b","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-secondary-container":"#735d00","surface-dim":"#dcd9d9","surface-variant":"#e5e2e1","tertiary":"#005d25","surface-tint":"#0f4ceb"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","margin":"1rem","space-xl":"2.5rem","margin-tablet":"2rem","space-xs":"0.25rem","gutter":"1rem","space-sm":"0.5rem","margin-desktop":"3rem","gutter-desktop":"1.5rem"},"fontFamily":{"headline-sm":["Space Grotesk"],"label-lg":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-xl":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-sm":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"]},"fontSize":{"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["16px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-xl":["20px",{"lineHeight":"32px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-lg text-body-lg text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b-2 border-on-surface shadow-[0_4px_0_0_#1c1b1b]"><div class="bg-secondary-container text-on-secondary-container px-4 py-2 border-b border-on-surface"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-on-secondary-container text-2xl">accessibility_new</span><span class="font-label-md text-label-md font-bold uppercase tracking-wide">โหมดผู้สูงอายุ (อ่านง่าย • ตัวโต • สบายตา) กำลังเปิดใช้งาน</span></div><div class="flex items-center gap-3"><div class="flex items-center bg-surface-container-lowest border border-on-surface rounded-lg px-2 py-1 gap-1"><span class="font-label-sm text-label-sm text-on-surface font-bold mr-1">ขนาดตัวหนังสือ:</span><button aria-label="ลดขนาดตัวอักษร" class="px-2 py-0.5 bg-surface-container text-on-surface font-label-md text-label-md font-bold rounded hover:bg-on-surface hover:text-surface transition-colors" type="button">A-</button><button aria-label="ขนาดตัวอักษรปกติ" class="px-2 py-0.5 bg-primary-container text-on-primary font-label-md text-label-md font-bold rounded" type="button">A</button><button aria-label="เพิ่มขนาดตัวอักษร" class="px-2 py-0.5 bg-surface-container text-on-surface font-label-md text-label-md font-bold rounded hover:bg-on-surface hover:text-surface transition-colors" type="button">A+</button></div><button class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest text-on-surface border border-on-surface rounded-lg hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-lg">contrast</span><span class="font-label-sm text-label-sm font-bold">สลับขาวดำ / สีสด</span></button><button class="flex items-center gap-1.5 px-3 py-1 bg-tertiary-container text-on-tertiary border border-on-surface rounded-lg hover:bg-tertiary transition-colors" type="button"><span class="material-symbols-outlined text-lg">volume_up</span><span class="font-label-sm text-label-sm font-bold">เปิดเสียงนำทาง</span></button></div></div></div><div class="h-20 max-w-7xl mx-auto px-4 md:px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-3"><a class="flex items-center" href="#"><img alt="FixLoop" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WN0AcfgdsIjo9582ZW6z5KYnwgD_Tv9wWhYjACMIHk5re7r74YUn4v9786uLtQ-rss2LrNMlRfuwvPZ4UFsAn2fIUto96QwXs6iKGioRoNMdR2G0wIG6InDjzKrEFmqyidkfqdtMNPF9uf9juakD0igrYRckbTHRGYryXAI4NIdSwsKpWzOuMe8Fu4ujDqQWmx5zplGxLk027E-5jeIb7tmO9LCvtPADGVpht37yo-X4fcCic8ahGmLw"></a></div><nav class="hidden md:flex items-center gap-2" data-active-classes="bg-primary-container text-on-primary border-2 border-on-surface shadow-[3px_3px_0_0_#1c1b1b]"><a class="px-4 py-2.5 rounded-lg border-2 border-transparent font-label-lg text-label-lg font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="report-issue" href="#">แจ้งปัญหา (ตัวโต)</a><a aria-current="page" class="px-4 py-2.5 rounded-lg font-label-lg font-bold transition-all bg-primary-container text-on-primary border-2 border-on-surface shadow-[3px_3px_0_0_#1c1b1b]" data-path="track-issues" href="#">ติดตามเรื่องของฉัน</a><a class="px-4 py-2.5 rounded-lg border-2 border-transparent font-label-lg text-label-lg font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="hotline-directory" href="#">โทรสายด่วน 24 ชม.</a><a class="px-4 py-2.5 rounded-lg border-2 border-transparent font-label-lg text-label-lg font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="community-map" href="#">แผนที่ปัญหาใกล้ตัว</a></nav><div class="flex items-center gap-3"><a class="hidden sm:flex items-center gap-2 px-4 py-2 bg-error text-on-error border-2 border-on-surface rounded-lg shadow-[3px_3px_0_0_#1c1b1b] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#1c1b1b] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all" href="tel:1555"><span class="material-symbols-outlined text-2xl">phone_in_talk</span><span class="font-headline-sm text-headline-sm font-bold">โทรด่วน 1555</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="bg-error-container text-on-error-container border-t-2 border-on-surface py-2 px-4"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-2xl">warning</span><span class="font-label-lg text-label-lg font-bold">กรณีเหตุด่วน เหตุฉุกเฉิน อุบัติเหตุ หรือไฟไหม้:</span><span class="font-body-md text-body-md font-bold">กดปุ่มโทรออกทันที ไม่ต้องกรอกแบบฟอร์ม</span></div><div class="flex items-center gap-2"><a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-error text-on-error font-label-md text-label-md font-bold rounded-lg border-2 border-on-surface shadow-[2px_2px_0_0_#1c1b1b]" href="tel:1555"><span class="material-symbols-outlined text-lg">call</span>โทร กทม. 1555</a><a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-on-surface text-surface font-label-md text-label-md font-bold rounded-lg border-2 border-on-surface shadow-[2px_2px_0_0_#1c1b1b]" href="tel:199"><span class="material-symbols-outlined text-lg">local_fire_department</span>โทร ดับเพลิง 199</a><a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-tertiary text-on-tertiary font-label-md text-label-md font-bold rounded-lg border-2 border-on-surface shadow-[2px_2px_0_0_#1c1b1b]" href="tel:1669"><span class="material-symbols-outlined text-lg">medical_services</span>โทร กู้ชีพ 1669</a></div></div></div></header><main class="w-full pt-44 bg-surface pb-16"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-12"><div class="flex flex-col w-full font-body-lg text-on-surface">
+<!-- Senior Greeting & Voice Assistant Banner -->
+<section class="bg-surface-container-lowest p-6 md:p-8 rounded-lg shadow-md mb-8">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 md:w-20 md:h-20 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-4xl md:text-5xl">elderly</span>
+</div>
+<div>
+<span class="inline-block bg-primary text-on-primary font-label-md text-label-md px-3 py-1 rounded-md mb-2">
+            หน้าจอสำหรับคุณตาคุณยายและผู้สูงวัย
+          </span>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+            ติดตามสถานะเรื่องร้องเรียนของคุณ
+          </h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant font-semibold">
+            ตัวหนังสือใหญ่พิเศษ • ชัดเจน • ไม่ซับซ้อน • กดฟังเสียงได้ทันที
+          </p>
+</div>
+</div>
+<div class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
+<button class="flex items-center justify-center gap-3 bg-tertiary text-on-tertiary px-6 py-4 rounded-xl shadow-md hover:bg-tertiary-container transition-all text-left" id="audio-read-main-btn" onclick="toggleReadAloud()" type="button">
+<span class="material-symbols-outlined text-3xl" id="audio-icon">volume_up</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold">กดฟังเสียงหน้านี้</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-container">ระบบจะอ่านข้อมูลทั้งหมดให้ฟัง</span>
+</div>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 1: Extra-Large Search Area -->
+<section class="bg-surface-container-lowest p-6 md:p-10 rounded-lg shadow-md mb-10">
+<div class="max-w-4xl mx-auto">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">search_check</span>
+<label class="font-headline-md text-headline-md font-bold text-on-surface" for="tracking-search">
+          ค้นหาเรื่องของคุณ (พิมพ์รหัส หรือ เบอร์โทร)
+        </label>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface-variant font-semibold mb-6">
+        ตัวอย่าง: พิมพ์รหัส 4-6 หลัก เช่น <span class="bg-surface-container px-2 py-0.5 rounded font-headline-sm text-headline-sm font-bold text-primary">08492</span> หรือกรอกเบอร์โทรศัพท์มือถือที่แจ้งไว้ 10 หลัก
+      </p>
+<form class="flex flex-col lg:flex-row gap-4 items-stretch" onsubmit="handleSearch(event)">
+<div class="relative flex-1">
+<input class="w-full h-20 px-6 pl-16 bg-surface-container-low text-on-surface font-headline-md text-headline-md font-bold rounded-lg focus:outline-none focus:bg-surface-container transition-all" id="tracking-search" placeholder="พิมพ์รหัสเรื่อง หรือ เบอร์โทร 10 หลัก ที่นี่..." type="text" value="FIX-2025-08492">
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-outline text-3xl">
+            tag
+          </span>
+</div>
+<button class="h-20 px-10 bg-primary-container text-on-primary rounded-lg shadow-md hover:bg-primary transition-all flex items-center justify-center gap-4 active:scale-95 shrink-0" type="submit">
+<span class="material-symbols-outlined text-4xl">search</span>
+<span class="font-headline-md text-headline-md font-bold tracking-wide">
+            กดค้นหาเรื่องของฉัน
+          </span>
+</button>
+</form>
+<!-- Quick Switch Recent Searches for Seniors -->
+<div class="mt-6 flex flex-wrap items-center gap-3 pt-4 bg-surface-container-low p-4 rounded-lg">
+<span class="font-label-lg text-label-lg font-bold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xl">history</span> เรื่องล่าสุดที่คุณเคยดู:
+        </span>
+<button class="bg-surface-container-lowest text-primary px-4 py-2 rounded-lg font-label-md text-label-md font-bold hover:bg-primary-fixed transition-colors" onclick="setQuery('FIX-2025-08492')" type="button">
+          ฝาท่อชำรุด พหลโยธิน 8 (#08492)
+        </button>
+<button class="bg-surface-container-lowest text-on-surface px-4 py-2 rounded-lg font-label-md text-label-md font-bold hover:bg-surface-container-high transition-colors" onclick="setQuery('FIX-2025-07119')" type="button">
+          หลอดไฟทางมืด ซอยอารีย์ (#07119)
+        </button>
+</div>
+</div>
+</section>
+<!-- Section 2: Huge Status Summary Box (Currently Viewing FIX-2025-08492) -->
+<section class="bg-secondary-container text-on-secondary-container p-6 md:p-10 rounded-lg shadow-xl mb-10">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-3">
+<span class="bg-on-secondary-container text-secondary-container font-headline-sm text-headline-sm px-4 py-1.5 rounded-lg font-bold tracking-wider">
+          รหัสเรื่องร้องเรียน: #FIX-2025-08492
+        </span>
+<span class="bg-surface-container-lowest text-on-surface font-label-lg text-label-lg px-4 py-1.5 rounded-lg font-bold flex items-center gap-2"><span class="material-symbols-outlined text-error text-xl">location_on</span>
+          ถนนท้ายบ้าน ซอย 14 (ต.ปากน้ำ อ.เมืองสมุทรปราการ)</span>
+</div>
+<div class="flex items-center gap-2 text-on-secondary-container font-label-lg text-label-lg font-bold">
+<span class="material-symbols-outlined text-2xl">update</span>
+        อัปเดตเมื่อ: 18 ก.พ. 2568 เวลา 14:15 น.
+      </div>
+</div>
+<!-- Banner Large Text -->
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-lg shadow-md mb-6">
+<div class="flex items-start md:items-center gap-4 mb-4">
+<div class="w-16 h-16 bg-secondary-fixed text-on-secondary-fixed rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-4xl">build_circle</span>
+</div>
+<div>
+<span class="text-secondary font-label-md text-label-md uppercase font-bold tracking-wider block">
+            ขั้นตอนปัจจุบัน
+          </span>
+<h2 class="font-headline-xl text-headline-xl font-bold text-on-surface leading-tight">
+            สถานะ: กำลังดำเนินการซ่อมแซม 🔧
+          </h2>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg mb-2">
+<p class="font-body-xl text-body-xl text-on-surface leading-relaxed font-bold">
+          "เจ้าหน้าที่ฝ่ายโยธา กำลังลงพื้นที่ซ่อมแซมฝาท่อ คาดว่าจะเสร็จสิ้นภายในวันนี้ (18 ก.พ. 2568 เวลาประมาณ 17:00 น.) ปลอดภัยต่อการสัญจร"
+        </p>
+</div>
+<div class="flex items-center gap-2 text-tertiary font-label-lg text-label-lg font-bold mt-3">
+<span class="material-symbols-outlined text-2xl">verified</span>
+<span class="">ผ่านการยืนยันหน้างานโดย: วิศวกรโยธาประจำเขตพญาไท</span>
+</div>
+</div>
+<!-- Quick Audio Player Bar for This Case -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-on-secondary-container text-secondary-fixed p-4 rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl animate-pulse">campaign</span>
+<span class="font-headline-sm text-headline-sm font-bold">เสียงแจ้งความคืบหน้าสั้น (15 วินาที)</span>
+</div>
+<button class="w-full sm:w-auto px-6 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-2 hover:bg-secondary-fixed transition-colors" onclick="playVoiceSummary()" type="button">
+<span class="material-symbols-outlined text-2xl">play_circle</span>
+<span class="">กดเพื่อฟังเสียงสรุป</span>
+</button>
+</div>
+</section>
+<!-- Section 3: Simplified 3-Step Visual Progress (Senior-Friendly) -->
+<section class="bg-surface-container-lowest p-6 md:p-10 rounded-lg shadow-md mb-10">
+<div class="mb-8">
+<span class="font-label-lg text-label-lg text-primary font-bold block mb-1">ทำความเข้าใจใน 3 วินาที</span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+        ขั้นตอนการทำงาน 3 ขั้นตอน
+      </h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+<!-- Step 1: Completed -->
+<div class="relative bg-surface-container p-6 md:p-8 rounded-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-12 h-12 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+              1
+            </span>
+<span class="inline-flex items-center gap-1 bg-tertiary text-on-tertiary font-label-md text-label-md font-bold px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm">done</span> สำเร็จแล้ว
+            </span>
+</div>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">
+            รับเรื่องแล้ว ✅
+          </h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            เจ้าหน้าที่ได้รับข้อมูล ภาพถ่าย และตำแหน่งเรียบร้อยแล้ว
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-lowest p-3 rounded text-on-surface-variant font-label-md text-label-md font-semibold">
+          วันจันทร์ที่ 17 ก.พ. 2568 • 09:30 น.
+        </div>
+</div>
+<!-- Step 2: In-Progress (Current Focus) -->
+<div class="relative bg-secondary-container text-on-secondary-container p-6 md:p-8 rounded-lg shadow-xl flex flex-col justify-between transform md:-translate-y-2">
+<div class="absolute -top-3.5 left-6 bg-error text-on-error px-4 py-1 rounded-full font-label-sm text-label-sm font-bold uppercase tracking-wider shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-surface animate-ping"></span> กำลังทำขั้นตอนนี้อยู่
+        </div>
+<div>
+<div class="flex items-center justify-between mb-4 mt-2">
+<span class="w-12 h-12 rounded-full bg-on-secondary-container text-secondary-container flex items-center justify-center font-headline-sm text-headline-sm font-bold">
+              2
+            </span>
+<span class="inline-flex items-center gap-1 bg-on-secondary-container text-secondary-fixed font-label-md text-label-md font-bold px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm">autorenew</span> ช่างกำลังซ่อม
+            </span>
+</div>
+<h4 class="font-headline-lg text-headline-lg font-bold text-on-secondary-container mb-2">
+            ช่างกำลังซ่อม 🛠️
+          </h4>
+<p class="font-body-xl text-body-xl text-on-secondary-container font-semibold">
+            ทีมช่าง 4 นายพร้อมปูนและฝาเหล็กใหม่ กำลังเทฐานหล่อรอบท่อ
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-lowest p-4 rounded text-on-surface font-body-md text-body-md font-bold">
+          ความคืบหน้า: ทำเสร็จแล้วประมาณ 70%
+          <div class="w-full bg-surface-container h-4 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 70%"></div>
+</div>
+</div>
+</div>
+<!-- Step 3: Pending -->
+<div class="relative bg-surface-container-low p-6 md:p-8 rounded-lg shadow-sm flex flex-col justify-between opacity-80">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="w-12 h-12 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm font-bold">
+              3
+            </span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-bold px-3 py-1 rounded-full">
+              รอตรวจขั้นสุดท้าย
+            </span>
+</div>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">
+            ซ่อมเสร็จแล้ว 🏁
+          </h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            ทำความสะอาด เก็บเศษวัสดุ และเปิดให้รถยนต์คนเดินวิ่งได้ตามปกติ
+          </p>
+</div>
+<div class="mt-6 pt-4 bg-surface-container-lowest p-3 rounded text-on-surface-variant font-label-md text-label-md font-semibold">
+          คาดว่าจะเสร็จ: วันนี้ เวลา 17:00 น.
+        </div>
+</div>
+</div>
+</section>
+<!-- Section 4: Detailed Big Cards (สรุปข้อมูล 4 ช่องขนาดใหญ่ ตัวหนังสือ 22px+) -->
+<section class="mb-10">
+<div class="mb-6 flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg text-secondary font-bold block">รายละเอียดที่ชัดเจน</span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+          ข้อมูลสรุปของเรื่องนี้ (อ่านง่าย ตัวโต)
+        </h3>
+</div>
+<button class="hidden md:flex items-center gap-2 bg-surface-container-high text-on-surface px-4 py-2 rounded-lg font-label-md text-label-md font-bold hover:bg-surface-container-highest transition-colors" onclick="increaseTextSize()" type="button">
+<span class="material-symbols-outlined text-xl">zoom_in</span> ขยายตัวหนังสือใหญ่ขึ้นอีก
+      </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1: เรื่องและสถานที่ -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 text-primary mb-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">report</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold uppercase tracking-wide">หัวข้อเรื่องที่แจ้ง</span>
+</div>
+<h4 class="font-headline-xl text-headline-xl font-bold text-on-surface mb-4">
+            ฝาท่อระบายน้ำชำรุด แตกหัก
+          </h4>
+<div class="bg-surface-container-low p-5 rounded-lg mb-4">
+<span class="font-label-md text-label-md text-on-surface-variant block font-bold mb-1">จุดที่เกิดเหตุ:</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface leading-snug">ถนนท้ายบ้าน ซอย 14 (หน้าร้านเลขที่ 45 ใกล้ตลาดปากน้ำ เทศบาลนครสมุทรปราการ)</p>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface-variant font-medium leading-relaxed">
+            ลักษณะปัญหา: ฝาท่อคอนกรีตแตกเป็นรูโหว่ลึก 1 เมตร รถจักรยานยนต์และคนสูงอายุเดินสะดุดเสี่ยงตกท่อ
+          </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between text-on-surface font-label-lg text-label-lg bg-surface-container-lowest">
+<span class="">ผู้แจ้ง: คุณลุงสมศักดิ์ ม. (แจ้งผ่านลูกสาว)</span>
+<span class="text-tertiary font-bold">ยืนยันตัวตนแล้ว</span>
+</div>
+</div>
+<!-- Card 2: หน่วยงานที่ดูแลและผู้รับผิดชอบ -->
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 text-secondary mb-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">account_balance</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold uppercase tracking-wide">หน่วยงานผู้รับผิดชอบ</span>
+</div>
+<h4 class="font-headline-xl text-headline-xl font-bold text-on-surface mb-4">เทศบาลนครสมุทรปราการ</h4>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="font-label-md text-label-md text-on-surface-variant block font-bold mb-1">ฝ่ายที่ลงมือซ่อม:</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">กองช่าง (ฝ่ายซ่อมบำรุงและสาธารณูปโภค)</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant block font-bold mb-1">หัวหน้าชุดช่างปฏิบัติการ:</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                  นายประสิทธิ์ ศรีวิชัย (ช่างชำนาญการ)
+                </p>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl">badge</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 flex flex-col sm:flex-row gap-3">
+<a class="flex-1 bg-surface-container-high text-on-surface py-3 px-4 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-colors" href="tel:023826199"><span class="material-symbols-outlined text-2xl text-primary">call</span>
+<span class="">เบอร์ตรงกองช่าง 02-382-6199</span></a>
+</div>
+</div>
+<!-- Card 3: ภาพถ่ายจุดเกิดเหตุ (เมื่อวาน) -->
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-lg shadow-md flex flex-col">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error text-3xl">photo_camera</span>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface">
+              ภาพที่ 1: ภาพจุดเกิดเหตุก่อนซ่อม
+            </h4>
+</div>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-3 py-1 rounded-full font-bold">
+            ถ่ายเมื่อ 17 ก.พ. 68
+          </span>
+</div>
+<div class="relative w-full h-72 md:h-80 rounded-lg overflow-hidden mb-4 shadow-inner bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up photograph of a dangerous broken concrete drain manhole cover on a Bangkok asphalt residential street, cracked jagged hole exposing dark water underneath, yellow warning chalk marked around it by neighbors, daylight clear view, civic report documentation style, high resolution crisp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCsjjEzh2zNUk4Fhvbpu2WYjGggjufMQLLCIhoILTtykDbcE8sUmv4NE8OwkdGMs3wg1-30qxagXJ0iVm2hf-Wi5QgHxZNncQzn2uSa01ru62Tad1-A9liAtb7T5vri2lZSUPmMPpiY5HzBD4juQstvpb-Y3Y1okxUZ8ZUuzM9VvbprcMluQfiKl5pkJgTo2jXlWV2HWIXnBcVlnaWpUS87L-oskv7RRDWpMf7slntPMhhjVpphbia">
+<div class="absolute bottom-3 left-3 right-3 bg-surface-container-lowest/90 backdrop-blur-sm p-3 rounded-lg text-on-surface font-body-lg text-body-lg font-bold flex items-center justify-between">
+<span class="">⚠️ สภาพฝาคอนกรีตแตก ร้าวรอบวงท่อ</span>
+<span class="text-error font-headline-sm text-headline-sm font-bold">อันตรายสูง</span>
+</div>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface font-semibold">
+          คำอธิบายภาพ: มีการนำกิ่งไม้และเก้าอี้พลาสติกมาวางกั้นเตือนผู้สูงอายุไม่ให้เดินสะดุดตก
+        </p>
+</div>
+<!-- Card 4: ภาพถ่ายช่างขณะกำลังทำงาน (วันนี้ ล่าสุด) -->
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-lg shadow-md flex flex-col">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-3xl">engineering</span>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface">
+              ภาพที่ 2: ช่างกำลังทำงานจริงวันนี้
+            </h4>
+</div>
+<span class="bg-tertiary-container text-on-tertiary font-label-sm text-label-sm px-3 py-1 rounded-full font-bold">
+            ถ่ายเมื่อ 18 ก.พ. 68 (13:30 น.)
+          </span>
+</div>
+<div class="relative w-full h-72 md:h-80 rounded-lg overflow-hidden mb-4 shadow-inner bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Thai municipal public works technicians wearing orange and reflective high-visibility safety vests repairing an urban drainage cover on Phaholyothin Bangkok road, mixing quick-dry cement and fitting a heavy-duty reinforced iron grating frame, sunny afternoon lighting, authentic documentary civic photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFkUGH9Naf05l_Mxy4ojOvjsZxsf9pRvQrtrzFSKzHx-dWa2wYqE8vvrFkiliap3zIj-9mJEBpHaYqOWRNUqhTNBaSuWSBMHVmIx4gJBBxzOXKQqHq3lD56ivP4-DQ6o9_90iS3fuPrG6DU5dav4pjinyw61A9yCaOf4yj_TjRkG-ttVCNg0ogU6vQQNVCLWbyCAVW8DeO8VBlQQt4h4Rk3IWunrRPPm3xrNNo5Y_EFEIKZYGzXGGt">
+<div class="absolute bottom-3 left-3 right-3 bg-tertiary-container text-on-tertiary p-3 rounded-lg font-body-lg text-body-lg font-bold flex items-center justify-between">
+<span class="">🔧 ช่างเปลี่ยนเป็นตะแกรงเหล็กหนาพิเศษ</span>
+<span class="bg-tertiary text-on-tertiary px-2 py-0.5 rounded text-label-sm font-bold">กำลังหล่อปูน</span>
+</div>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface font-semibold">
+          คำอธิบายภาพ: เจ้าหน้าที่ 4 นายเข้าติดตั้งฝาเหล็กและเทปูนเชื่อมขอบถนนเพื่อความเรียบเนียน
+        </p>
+</div>
+</div>
+</section>
+<!-- Section 5: Easy Large Actions for Seniors -->
+<section class="bg-surface-container-lowest p-6 md:p-10 rounded-lg shadow-md mb-12">
+<div class="text-center max-w-3xl mx-auto mb-8">
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-2">
+        ปุ่มช่วยเหลือพิเศษสำหรับคุณตาคุณยาย
+      </h3>
+<p class="font-body-xl text-body-xl text-on-surface-variant font-semibold">
+        หากมีข้อสงสัยหรือไม่เข้าใจข้อมูล สามารถเลือกกดปุ่มด้านล่างนี้ได้ทันที ตัวหนังสือใหญ่ ชัดเจน ไม่ต้องกลัวกดผิด
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+<!-- Big Action 1: Call Directly -->
+<a class="bg-error text-on-error p-6 md:p-8 rounded-lg shadow-xl hover:bg-error-container hover:text-on-error-container transition-all flex flex-col items-center text-center justify-center gap-4 group active:scale-95" href="tel:022794140">
+<div class="w-20 h-20 bg-surface text-error rounded-full flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl">phone_in_talk</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg font-bold leading-tight mb-2">
+            โทรสอบถามเขต
+          </span>
+<span class="font-body-xl text-body-xl font-bold opacity-90">
+            (กดโทรออกทันที ไม่ต้องกดเบอร์เอง)
+          </span>
+<span class="font-label-md text-label-md mt-2 underline">
+            โทร 02-279-4140 ต่อฝ่ายโยธา
+          </span>
+</div>
+</a>
+<!-- Big Action 2: Listen to Voice Reading -->
+<button class="bg-tertiary text-on-tertiary p-6 md:p-8 rounded-lg shadow-xl hover:bg-tertiary-container hover:text-on-tertiary-container transition-all flex flex-col items-center text-center justify-center gap-4 group active:scale-95" onclick="speakFullUpdate()" type="button">
+<div class="w-20 h-20 bg-surface text-tertiary rounded-full flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl" id="speak-btn-icon">volume_up</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg font-bold leading-tight mb-2">
+            ให้ระบบอ่านให้ฟัง
+          </span>
+<span class="font-body-xl text-body-xl font-bold opacity-90">
+            (ฟังเสียงพูดภาษาไทย ชัดถ้อยชัดคำ)
+          </span>
+<span class="font-label-md text-label-md mt-2">
+            ความยาวประมาณ 25 วินาที
+          </span>
+</div>
+</button>
+<!-- Big Action 3: Print / Save Large Paper -->
+<button class="bg-primary text-on-primary p-6 md:p-8 rounded-lg shadow-xl hover:bg-primary-container transition-all flex flex-col items-center text-center justify-center gap-4 group active:scale-95" onclick="window.print()" type="button">
+<div class="w-20 h-20 bg-surface text-primary rounded-full flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl">print</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg font-bold leading-tight mb-2">
+            พิมพ์ใบนี้เก็บไว้
+          </span>
+<span class="font-body-xl text-body-xl font-bold opacity-90">
+            (พิมพ์เป็นกระดาษตัวหนังสือใหญ่)
+          </span>
+<span class="font-label-md text-label-md mt-2">
+            สำหรับพกติดตัวหรือส่งให้ลูกหลานดู
+          </span>
+</div>
+</button>
+</div>
+</section>
+<!-- Section 6: Community Support & Neighbor Feedback -->
+<section class="bg-surface-container p-6 md:p-8 rounded-lg shadow-md mb-8">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 bg-surface-container-lowest text-primary rounded-full flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-3xl">thumb_up</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface">
+            มีเพื่อนบ้านในซอยร่วมกด "เห็นด้วย/เป็นพยาน" แล้ว 42 คน
+          </h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-medium">
+            ช่วยให้เขตเร่งการทำงานเร็วขึ้นเป็นกรณีเร่งด่วนประจำสัปดาห์
+          </p>
+</div>
+</div>
+<div class="w-full md:w-auto flex items-center gap-3">
+<button class="w-full md:w-auto px-6 py-4 bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-3 shadow-md hover:bg-primary-container transition-all" id="upvote-btn" onclick="supportCase()" type="button">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<span class="" id="upvote-text">กดให้กำลังใจช่าง (+1)</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Interactive Modal: Simple Senior Voice Notification Simulation -->
+<div class="fixed inset-0 bg-on-background/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="voice-overlay">
+<div class="bg-surface-container-lowest max-w-xl w-full p-8 rounded-lg shadow-2xl flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-6 animate-bounce">
+<span class="material-symbols-outlined text-6xl">record_voice_over</span>
+</div>
+<h3 class="font-headline-xl text-headline-xl font-bold text-on-surface mb-4">
+        กำลังอ่านออกเสียง...
+      </h3>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-relaxed bg-surface-container-low p-6 rounded-lg mb-6" id="voice-spoken-text">
+        "รายงานเรื่องร้องเรียน หมายเลข 08492 ซ่อมฝาท่อระบายน้ำ พหลโยธิน 8 แยก 3 ขณะนี้ฝ่ายโยธาเขตพญาไท กำลังซ่อมแซม คาดว่าจะเสร็จวันนี้เวลา 17:00 น. ค่ะ"
+      </p>
+<button class="w-full py-4 bg-error text-on-error rounded-lg font-headline-md text-headline-md font-bold shadow-md hover:bg-error-container hover:text-on-error-container transition-colors" onclick="stopVoice()" type="button">
+        หยุดอ่านเสียง (ปิด)
+      </button>
+</div>
+</div>
+</div>
+<!-- Inline Interactive Script for Seniors -->
+<script>
+  let isSpeaking = false;
+  let hasSupported = false;
+  let currentZoom = 1;
+
+  function toggleReadAloud() {
+    speakFullUpdate();
+  }
+
+  function speakFullUpdate() {
+    const modal = document.getElementById('voice-overlay');
+    const spokenText = document.getElementById('voice-spoken-text');
+    spokenText.textContent = "รายงานเรื่องร้องเรียน หมายเลข 08492 เรื่องฝาท่อระบายน้ำชำรุด ที่ถนนพหลโยธิน 8 แยก 3 ขณะนี้เจ้าหน้าที่ฝ่ายโยธา สำนักงานเขตพญาไท กำลังลงพื้นที่ซ่อมแซมฝาท่อ คาดว่าจะเสร็จสิ้นภายในวันนี้ เวลาประมาณ 17 นาฬิกาตรงค่ะ ปลอดภัยแน่นอนค่ะ";
+    
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    
+    // Check if browser supports Web Speech API
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(spokenText.textContent);
+      utterance.lang = 'th-TH';
+      utterance.rate = 0.85; // Slightly slower for elderly comprehension
+      utterance.pitch = 1.0;
+      utterance.onend = function() {
+        // keep modal open for a moment or close gracefully
+      };
+      window.speechSynthesis.speak(utterance);
+    }
+  }
+
+  function playVoiceSummary() {
+    speakFullUpdate();
+  }
+
+  function stopVoice() {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    const modal = document.getElementById('voice-overlay');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function handleSearch(event) {
+    event.preventDefault();
+    const query = document.getElementById('tracking-search').value.trim();
+    if (!query) {
+      alert("กรุณาพิมพ์รหัสเรื่อง หรือ เบอร์โทรศัพท์ ที่ต้องการค้นหาก่อนนะคะ");
+      return;
+    }
+    // Simple senior reassurance
+    alert("ระบบกำลังดึงข้อมูลล่าสุดของ: " + query + " เรียบร้อยแล้วค่ะ");
+  }
+
+  function setQuery(code) {
+    document.getElementById('tracking-search').value = code;
+  }
+
+  function supportCase() {
+    const btn = document.getElementById('upvote-btn');
+    const txt = document.getElementById('upvote-text');
+    if (!hasSupported) {
+      hasSupported = true;
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-tertiary');
+      txt.textContent = "คุณได้ส่งกำลังใจแล้ว ขอบคุณค่ะ ❤️";
+    } else {
+      alert("คุณตาคุณยายได้ส่งกำลังใจให้ทีมช่างแล้ว ขอบคุณมากนะคะ");
+    }
+  }
+
+  function increaseTextSize() {
+    const mainEl = document.querySelector('main');
+    if (currentZoom === 1) {
+      mainEl.style.fontSize = "120%";
+      currentZoom = 1.2;
+      alert("ขยายขนาดตัวหนังสือใหญ่ขึ้นอีก 20% แล้วค่ะ");
+    } else {
+      mainEl.style.fontSize = "100%";
+      currentZoom = 1;
+      alert("ปรับขนาดตัวหนังสือกลับสู่ขนาดปกติแล้วค่ะ");
+    }
+  }
+</script></div></main><footer class="w-full bg-surface-container-high border-t-2 border-on-surface py-10"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"><div class="border-2 border-on-surface bg-surface-container-lowest p-6 rounded-lg shadow-[4px_4px_0_0_#1c1b1b]"><div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-primary text-3xl">contact_support</span><h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">ช่วยเหลือและคำแนะนำ</h3></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">หากผู้สูงอายุหรือญาติไม่สะดวกพิมพ์ข้อความ สามารถโทรแจ้งเรื่องผ่านเจ้าหน้าที่คอลเซ็นเตอร์ได้โดยตรงตลอด 24 ชั่วโมง มีเจ้าหน้าที่คอยพูดคุยและบันทึกข้อมูลให้</p><div class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold"><span class="material-symbols-outlined">support_agent</span><span class="">บริการผู้ช่วยเสียงและเจ้าหน้าที่อำนวยความสะดวก</span></div></div><div class="border-2 border-on-surface bg-secondary-fixed p-6 rounded-lg shadow-[4px_4px_0_0_#1c1b1b]"><div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-on-secondary-fixed text-3xl">phone_in_talk</span><h3 class="font-headline-sm text-headline-sm font-bold text-on-secondary-fixed">เบอร์สายด่วนสำคัญ</h3></div><ul class="space-y-2 font-body-md text-body-md text-on-secondary-fixed font-bold"><li class="flex items-center justify-between border-b border-on-secondary-fixed/20 pb-1"><span class="">ศูนย์รับเรื่อง เทศบาลนครสมุทรปราการ</span><a class="underline text-headline-sm" href="tel:023826199">02-382-6199</a></li><li class="flex items-center justify-between border-b border-on-secondary-fixed/20 pb-1"><span class="">แจ้งเหตุเพลิงไหม้-สัตว์มีพิษ</span><a class="underline text-headline-sm" href="tel:199">199</a></li><li class="flex items-center justify-between"><span class="">สายด่วนการแพทย์ฉุกเฉิน (ฟรี)</span><a class="underline text-headline-sm" href="tel:1669">1669</a></li></ul></div><div class="border-2 border-on-surface bg-surface-container-lowest p-6 rounded-lg shadow-[4px_4px_0_0_#1c1b1b]"><div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-tertiary text-3xl">verified_user</span><h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">มาตรฐานความโปร่งใส</h3></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">FixLoop มุ่งมั่นเชื่อมโยงเสียงของประชาชนทุกช่วงวัยสู่การแก้ปัญหาจริง เจ้าหน้าที่ตรวจสอบและอัปเดตสถานะทุกขั้นตอนอย่างเปิดเผย</p><span class="inline-block px-3 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-bold border border-on-surface rounded">เวอร์ชัน 2.4 (เวอร์ชันมิตรภาพเพื่อผู้สูงวัย)</span></div></div><div class="text-center border-t border-outline-variant pt-6 text-on-surface font-body-sm text-body-sm">© 2025 FixLoop - เทคโนโลยีเพื่อประชาชนเพื่อสังคมที่เป็นธรรมและทั่วถึง</div></div></footer>
+
+
+</body></html>

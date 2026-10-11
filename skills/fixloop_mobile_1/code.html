@@ -1,0 +1,211 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_blank" name="shell-type"><title>FixLoop</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"><link class="" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-variant": "#e5e2e1", "on-primary-fixed": "#001453", "on-secondary": "#ffffff", "primary-container": "#2457f5", "on-secondary-fixed-variant": "#564500", "surface-tint": "#0f4ceb", "on-error-container": "#93000a", "inverse-primary": "#b8c4ff", "surface-container-low": "#f6f3f2", "surface-container-lowest": "#ffffff", "surface-bright": "#fcf9f8", "on-surface-variant": "#434656", "surface-dim": "#dcd9d9", "inverse-on-surface": "#f3f0ef", "on-background": "#1c1b1b", "background": "#fcf9f8", "on-tertiary": "#ffffff", "surface": "#fcf9f8", "on-surface": "#1c1b1b", "secondary-container": "#fed74c", "inverse-surface": "#313030", "on-tertiary-container": "#8fffa1", "error": "#ba1a1a", "on-primary-fixed-variant": "#0037b9", "primary-fixed": "#dde1ff", "secondary-fixed": "#ffe07e", "error-container": "#ffdad6", "secondary": "#725c00", "surface-container-high": "#eae7e7", "outline": "#747687", "tertiary-fixed": "#7ffc97", "tertiary-fixed-dim": "#62df7d", "on-primary-container": "#e4e6ff", "on-secondary-fixed": "#231b00", "secondary-fixed-dim": "#e9c339", "outline-variant": "#c4c5d8", "tertiary-container": "#007833", "on-tertiary-fixed": "#002109", "surface-container-highest": "#e5e2e1", "on-error": "#ffffff", "surface-container": "#f0eded", "on-secondary-container": "#735d00", "primary-fixed-dim": "#b8c4ff", "on-primary": "#ffffff", "tertiary": "#005d25", "primary": "#003ece", "on-tertiary-fixed-variant": "#005320" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1rem", "margin-desktop": "3rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "margin": "1rem", "margin-tablet": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem" }, fontFamily: { "headline-lg-mobile": ["Space Grotesk"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "body-xl": ["Plus Jakarta Sans"], "headline-xl": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Space Grotesk"] }, fontSize: { "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-xl": ["20px", { "lineHeight": "32px", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style class="">body, h1, h2, h3, h4, h5, h6, p, span:not(.material-symbols-outlined), a, button, div, input, select, textarea { font-family: 'Noto Sans Thai', sans-serif !important; } .material-symbols-outlined { font-family: 'Material Symbols Outlined' !important; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface pt-safe pb-safe min-h-screen flex flex-col" style="font-family: &quot;Noto Sans Thai&quot;, sans-serif;"><main class="flex flex-col relative w-full bg-surface min-h-screen"><div class="flex flex-col w-full px-space-md pb-space-xl">
+<!-- Senior Accessibility Switcher Floating Pill -->
+<div class="flex items-center justify-between py-space-sm mb-space-sm">
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high px-3 py-1.5 rounded-full shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">ระบบรับเรื่องอัตโนมัติ</span>
+</div>
+<!-- Easy-Read Mode Toggle Micro-Component -->
+<button aria-label="สลับโหมดอ่านง่าย" class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest shadow-sm rounded-full active:scale-95 transition-transform" id="senior-mode-toggle">
+<span class="material-symbols-outlined text-[18px] text-primary">visibility</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">โหมดอ่านง่าย</span>
+</button>
+</div>
+<!-- Hero Success Badge Section -->
+<div class="flex flex-col items-center text-center mt-space-xs mb-space-lg">
+<!-- Brutalist Physical Celebration Stamp -->
+<div class="relative mb-space-md">
+<!-- Shadow accent element -->
+<div class="w-20 h-20 rounded-xl bg-on-surface absolute translate-x-1.5 translate-y-1.5"></div>
+<div class="relative w-20 h-20 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[44px]" style="font-variation-settings: 'FILL' 1, 'wght' 700;">check_circle</span>
+</div>
+<!-- Decorative Civic Star Badge -->
+<div class="absolute -top-2 -right-3 bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">สำเร็จ</span>
+</div>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-space-xs tracking-tight">
+      ส่งเรื่องแจ้งปัญหาเรียบร้อยแล้ว!
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[280px]">
+      ข้อมูลของคุณถูกส่งไปยังเทศกิจและหน่วยงานส่วนท้องถิ่นเรียบร้อยแล้ว
+    </p>
+</div>
+<!-- Reference Ticket Number Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md mb-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">tag</span>
+        รหัสอ้างอิงใบคำร้อง
+      </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+        รับเรื่องแล้ว
+      </span>
+</div>
+<div class="flex items-stretch gap-space-xs">
+<div class="flex-1 bg-surface-container-low px-3 py-2.5 rounded-lg flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono tracking-wide select-all" id="ticket-id">
+          #FIX-2025-08492
+        </span>
+</div>
+<button class="flex items-center justify-center gap-1 bg-surface-container-high active:bg-secondary-container text-on-surface px-space-md rounded-lg active:scale-95 transition-all shadow-sm" id="copy-btn" onclick="copyTicketCode()">
+<span class="material-symbols-outlined text-[20px]" id="copy-icon">content_copy</span>
+<span class="font-label-md text-label-md" id="copy-text">คัดลอก</span>
+</button>
+</div>
+<div class="hidden text-center mt-2 font-label-sm text-label-sm text-tertiary font-bold transition-opacity" id="copy-toast">
+      คัดลอกรหัสคำร้องสำเร็จ!
+    </div>
+</div>
+<!-- Civic Timeline Estimate & SLA Banner -->
+<div class="bg-secondary-fixed text-on-secondary-fixed p-space-md rounded-xl shadow-sm mb-space-md flex items-start gap-space-sm">
+<div class="p-2 bg-on-secondary-fixed text-secondary-fixed rounded-lg mt-0.5">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+<div class="flex-1">
+<p class="font-label-lg text-label-lg font-bold">
+        เจ้าหน้าที่เขตจะเข้าตรวจสอบภายใน 24 ชม.
+      </p>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant mt-0.5">
+        ระบบจะส่งการแจ้งเตือนเมื่อทีมงานลงพื้นที่และมีความคืบหน้าภาพถ่ายแก้ไข
+      </p>
+</div>
+</div>
+<!-- Issue Summary & Captured Photo Mosaic -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md mb-space-md">
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">report_problem</span>
+        สรุปรายการที่แจ้ง
+      </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">วันนี้ 14:32 น.</span>
+</div>
+<!-- Image + Detail Snippet -->
+<div class="flex gap-space-sm items-center mb-space-md">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="High angle photo of a broken concrete footpath with uneven paving stones and yellow safety hazard tape placed on a lively Bangkok street, natural daylight, civic infrastructure repair report scene" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzXsjbEI-PsxQuA4_6Q6mJjQpRzzHxi97wk4Qyuu_Hjtqz0SY52-nHaNgCKM0nTQ__FCZen9jGwaCaJXfsE3HKNTH1buEPG-UcTeJ8d4q3irfJWgcXtjieQ-eOvJB7sL8Ujg2G4VK0mlXdPbcOg0JsUy4lpkEM3ZuBFuMjHkD_H9wDtZdXZhqf_2Lt3aCnHdDwtvVwa6lorkEfWJ3aHA5pJziTm122P4m4NIquy5xIVwSycQhTbPPi">
+<div class="absolute bottom-0 right-0 bg-surface-container-lowest/90 px-1 py-0.5 text-[10px] font-label-sm text-on-surface">1 ภาพ</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="inline-block px-2 py-0.5 rounded bg-surface-variant text-on-surface-variant font-label-sm text-label-sm mb-1">
+          ทางเท้าชำรุด / ท่อระบายน้ำ
+        </div>
+<p class="font-body-md text-body-md text-on-surface font-semibold truncate">
+          กระเบื้องทางเท้าแตกทรุด หน้าปากซอยสุขุมวิท 39
+        </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[14px]">near_me</span>
+          เขตวัฒนา, กรุงเทพมหานคร
+        </p>
+</div>
+</div>
+<!-- QR Code Verification Card -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-center gap-space-md">
+<div class="bg-surface-container-lowest p-1.5 rounded-lg shadow-sm flex-shrink-0 flex items-center justify-center"><img src="https://lh3.googleusercontent.com/aida/AEtjO1We290OiIaqCt9YO8IE-duRmDDELV2cYJ9PeUO9963yF0n1ByX9VvfNTg7TmBTnAHd2J-XJwvxi5xiuJoVax1DVwnhkWqLIXfDL11S-u3W4mo75jgRX-g4HQd3TkkBAHDPIzAjfbxq9clCzDf8Lqg9Pk6SevqXAMAC-oJMl_0djihxtTfiL1o7ssK9lq_xIL4qUV2gki3SM5Ks0lw1Rk_u9SVReINwmf8AO4uzh7tS8-IWYgYecQg0qD_k" alt="QR Code ติดตามเรื่อง FIX-2025-08492" class="w-28 h-28 object-contain p-1 bg-white rounded border border-slate-900"></div>
+<div class="flex-1">
+<h4 class="font-label-lg text-label-lg text-on-surface">QR ติดตามงานภาคสนาม</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 mb-2">
+          สแกนหรือบันทึกภาพเพื่อตรวจสอบความคืบหน้าจุดเกิดเหตุ
+        </p>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg shadow-sm active:scale-95 text-left transition-all" onclick="downloadQrCard()">
+<span class="material-symbols-outlined text-[16px] text-primary">download</span>
+<span class="font-label-sm text-label-sm font-bold">บันทึกลงเครื่อง</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Community Solidarity Callout -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">เปิดให้เพื่อนบ้านร่วมโหวตสนับสนุน</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">เรื่องของคุณถูกปักหมุดบนแผนที่ชุมชนแล้ว</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</div>
+<!-- Sticky-Safe Civic Actions (Brutalist CTA Block) -->
+<div class="flex flex-col gap-space-sm w-full">
+<!-- Primary Action: Blue Primary Brutalist Button -->
+<a class="w-full h-12 bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-md active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all no-underline" href="#">
+<span class="material-symbols-outlined text-[20px]">search_insights</span>
+<span class="">ติดตามสถานะเรื่องนี้ทันที</span>
+</a>
+<!-- Secondary Action: Return Home / New Report -->
+<div class="grid grid-cols-2 gap-space-sm">
+<a class="h-12 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all no-underline" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+<span class="">กลับหน้าแรก</span>
+</a>
+<a class="h-12 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-xl flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all no-underline" href="#">
+<span class="material-symbols-outlined text-[18px]">add_location_alt</span>
+<span class="">แจ้งเรื่องใหม่</span>
+</a>
+</div>
+</div>
+</div>
+<script>
+  function copyTicketCode() {
+    const ticketText = document.getElementById('ticket-id').innerText.trim();
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(ticketText).then(() => {
+        showCopyFeedback();
+      });
+    } else {
+      showCopyFeedback();
+    }
+  }
+
+  function showCopyFeedback() {
+    const copyText = document.getElementById('copy-text');
+    const copyIcon = document.getElementById('copy-icon');
+    const copyToast = document.getElementById('copy-toast');
+    
+    copyText.innerText = 'คัดลอกแล้ว';
+    copyIcon.innerText = 'check';
+    copyToast.classList.remove('hidden');
+
+    setTimeout(() => {
+      copyText.innerText = 'คัดลอก';
+      copyIcon.innerText = 'content_copy';
+      copyToast.classList.add('hidden');
+    }, 2500);
+  }
+
+  function downloadQrCard() {
+    const btn = event.currentTarget;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check</span><span class="font-label-sm text-label-sm font-bold text-tertiary">บันทึกสำเร็จ</span>';
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+    }, 2000);
+  }
+
+  // Senior Easy-Read Mode toggle script
+  const seniorBtn = document.getElementById('senior-mode-toggle');
+  let seniorActive = false;
+  seniorBtn.addEventListener('click', () => {
+    seniorActive = !seniorActive;
+    if (seniorActive) {
+      document.documentElement.style.fontSize = '18px';
+      seniorBtn.classList.add('bg-secondary-container');
+    } else {
+      document.documentElement.style.fontSize = '';
+      seniorBtn.classList.remove('bg-secondary-container');
+    }
+  });
+</script></main>
+
+
+</body></html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>FixLoop - ระบบรับเรื่องร้องเรียนเพื่อประชาชน</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link class="" href="https://fonts.googleapis.com/css2?family=Google+Sans+Thai:wght@300;400;500;600;700&amp;family=Google+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;font-family:'Noto Sans Thai','Plus Jakarta Sans',sans-serif;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-background":"#1c1b1b","secondary":"#725c00","primary":"#003ece","surface-bright":"#fcf9f8","outline-variant":"#c4c5d8","inverse-on-surface":"#f3f0ef","on-primary-container":"#e4e6ff","on-surface-variant":"#434656","secondary-container":"#fed74c","surface-container":"#f0eded","on-primary-fixed-variant":"#0037b9","on-tertiary-fixed":"#002109","on-error-container":"#93000a","secondary-fixed":"#ffe07e","error-container":"#ffdad6","primary-fixed-dim":"#b8c4ff","on-primary-fixed":"#001453","outline":"#747687","on-primary":"#ffffff","primary-container":"#2457f5","surface-container-highest":"#e5e2e1","tertiary-fixed":"#7ffc97","secondary-fixed-dim":"#e9c339","inverse-surface":"#313030","surface":"#fcf9f8","on-tertiary-fixed-variant":"#005320","surface-container-high":"#eae7e7","tertiary-container":"#007833","on-tertiary-container":"#8fffa1","on-tertiary":"#ffffff","background":"#fcf9f8","on-secondary-fixed":"#231b00","on-error":"#ffffff","inverse-primary":"#b8c4ff","primary-fixed":"#dde1ff","error":"#ba1a1a","on-secondary-fixed-variant":"#564500","tertiary-fixed-dim":"#62df7d","surface-container-low":"#f6f3f2","on-surface":"#1c1b1b","on-secondary":"#ffffff","surface-container-lowest":"#ffffff","on-secondary-container":"#735d00","surface-dim":"#dcd9d9","surface-variant":"#e5e2e1","tertiary":"#005d25","surface-tint":"#0f4ceb"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","margin":"1rem","space-xl":"2.5rem","margin-tablet":"2rem","space-xs":"0.25rem","gutter":"1rem","space-sm":"0.5rem","margin-desktop":"3rem","gutter-desktop":"1.5rem"},"fontFamily":{"headline-sm":["Space Grotesk"],"label-lg":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-xl":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"label-sm":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"headline-md":["Space Grotesk"]},"fontSize":{"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["16px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-xl":["20px",{"lineHeight":"32px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}]}}}};</script><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&amp;family=Noto+Sans+Thai:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><style class="">body, body *:not(.material-symbols-outlined):not([class*="material-symbols"]) { font-family: 'Google Sans Thai', 'Google Sans', 'Noto Sans Thai', sans-serif !important; } .material-symbols-outlined { font-family: 'Material Symbols Outlined' !important; }</style></head><body class="bg-surface font-body-lg text-body-lg text-on-surface min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b-2 border-on-surface shadow-[0_4px_0_0_#1c1b1b]"><div class="bg-secondary-container text-on-secondary-container px-4 py-2 border-b border-on-surface"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-on-secondary-container text-2xl">accessibility_new</span><span class="font-label-md text-label-md font-bold uppercase tracking-wide">โหมดผู้สูงอายุ (อ่านง่าย • ตัวโต • สบายตา) กำลังเปิดใช้งาน</span></div><div class="flex items-center gap-3"><div class="flex items-center bg-surface-container-lowest border border-on-surface rounded-lg px-2 py-1 gap-1"><span class="font-label-sm text-label-sm text-on-surface font-bold mr-1">ขนาดตัวหนังสือ:</span><button aria-label="ลดขนาดตัวอักษร" class="px-2 py-0.5 bg-surface-container text-on-surface font-label-md text-label-md font-bold rounded hover:bg-on-surface hover:text-surface transition-colors" type="button">A-</button><button aria-label="ขนาดตัวอักษรปกติ" class="px-2 py-0.5 bg-primary-container text-on-primary font-label-md text-label-md font-bold rounded" type="button">A</button><button aria-label="เพิ่มขนาดตัวอักษร" class="px-2 py-0.5 bg-surface-container text-on-surface font-label-md text-label-md font-bold rounded hover:bg-on-surface hover:text-surface transition-colors" type="button">A+</button></div><button class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-lowest text-on-surface border border-on-surface rounded-lg hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-lg">contrast</span><span class="font-label-sm text-label-sm font-bold">สลับขาวดำ / สีสด</span></button><button class="flex items-center gap-1.5 px-3 py-1 bg-tertiary-container text-on-tertiary border border-on-surface rounded-lg hover:bg-tertiary transition-colors" type="button"><span class="material-symbols-outlined text-lg">volume_up</span><span class="font-label-sm text-label-sm font-bold">เปิดเสียงนำทาง</span></button></div></div></div><div class="h-20 max-w-7xl mx-auto px-4 md:px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center"><a class="flex items-center" href="#"><img alt="FixLoop" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WN0AcfgdsIjo9582ZW6z5KYnwgD_Tv9wWhYjACMIHk5re7r74YUn4v9786uLtQ-rss2LrNMlRfuwvPZ4UFsAn2fIUto96QwXs6iKGioRoNMdR2G0wIG6InDjzKrEFmqyidkfqdtMNPF9uf9juakD0igrYRckbTHRGYryXAI4NIdSwsKpWzOuMe8Fu4ujDqQWmx5zplGxLk027E-5jeIb7tmO9LCvtPADGVpht37yo-X4fcCic8ahGmLw"></a></div><nav class="hidden md:flex items-center gap-2" data-active-classes="bg-primary-container text-on-primary border-2 border-on-surface shadow-[3px_3px_0_0_#1c1b1b]"><a aria-current="page" class="px-4 py-2.5 rounded-lg font-label-lg font-bold transition-all bg-primary-container text-on-primary border-2 border-on-surface shadow-[3px_3px_0_0_#1c1b1b]" data-path="report-issue" href="#">แจ้งปัญหา (ตัวโต)</a><a class="px-4 py-2.5 rounded-lg border-2 border-transparent font-label-lg text-label-lg font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="track-issues" href="#">ติดตามเรื่องของฉัน</a><a class="px-4 py-2.5 rounded-lg border-2 border-transparent font-label-lg text-label-lg font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="hotline-directory" href="#">โทรสายด่วน 24 ชม.</a><a class="px-4 py-2.5 rounded-lg border-2 border-transparent font-label-lg text-label-lg font-bold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="community-map" href="#">แผนที่ปัญหาใกล้ตัว</a></nav><div class="flex items-center gap-3"><a class="hidden sm:flex items-center gap-2 px-4 py-2 bg-error text-on-error border-2 border-on-surface rounded-lg shadow-[3px_3px_0_0_#1c1b1b] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#1c1b1b] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all" href="tel:1555"><span class="material-symbols-outlined text-2xl">phone_in_talk</span><span class="font-headline-sm text-headline-sm font-bold">โทรด่วน 1555</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="bg-error-container text-on-error-container border-t-2 border-on-surface py-2 px-4"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-error text-2xl">warning</span><span class="font-label-lg text-label-lg font-bold">กรณีเหตุด่วน เหตุฉุกเฉิน อุบัติเหตุ หรือไฟไหม้:</span><span class="font-body-md text-body-md font-bold">กดปุ่มโทรออกทันที ไม่ต้องกรอกแบบฟอร์ม</span></div><div class="flex items-center gap-2"><a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-error text-on-error font-label-md text-label-md font-bold rounded-lg border-2 border-on-surface shadow-[2px_2px_0_0_#1c1b1b]" href="tel:1555"><span class="material-symbols-outlined text-lg">call</span>โทร กทม. 1555</a><a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-on-surface text-surface font-label-md text-label-md font-bold rounded-lg border-2 border-on-surface shadow-[2px_2px_0_0_#1c1b1b]" href="tel:199"><span class="material-symbols-outlined text-lg">local_fire_department</span>โทร ดับเพลิง 199</a><a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-tertiary text-on-tertiary font-label-md text-label-md font-bold rounded-lg border-2 border-on-surface shadow-[2px_2px_0_0_#1c1b1b]" href="tel:1669"><span class="material-symbols-outlined text-lg">medical_services</span>โทร กู้ชีพ 1669</a></div></div></div></header><main class="w-full pt-44 bg-surface pb-16"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-12"><div class="flex flex-col w-full">
+<!-- Senior Mode Hero Orientation / Audio Guidance Bar -->
+<div class="relative w-full bg-secondary-container text-on-secondary-container p-6 md:p-8 rounded-xl shadow-xl mb-10 overflow-hidden">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-secondary text-5xl md:text-6xl" style="font-variation-settings: 'FILL' 1;">elderly</span>
+</div>
+<div>
+<span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md font-bold mb-2 shadow-sm">
+<span class="w-3 h-3 rounded-full bg-tertiary animate-ping"></span>
+            โหมดใช้งานง่ายสำหรับคุณตาคุณยาย
+          </span>
+<h1 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl text-on-secondary-container font-extrabold tracking-tight">
+            แจ้งเรื่องด่วน ชุมชนดูแลทันใจ
+          </h1>
+<p class="font-body-xl text-body-xl text-on-secondary-container font-semibold mt-1">
+            ตัวหนังสือใหญ่พิเศษ • กดง่าย ไม่ต้องพิมพ์เยอะ • ไม่ต้องจำรหัสผ่าน
+          </p>
+</div>
+</div>
+<!-- Voice Guidance Assist Trigger -->
+<button aria-label="กดเพื่อฟังเสียงอ่านขั้นตอนแนะนำ" class="w-full md:w-auto px-6 py-4 bg-surface-container-lowest text-on-surface hover:bg-surface-container-low rounded-xl shadow-md transition-transform active:scale-95 flex items-center justify-center gap-4 shrink-0" id="play-speech-btn" type="button">
+<span class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-3xl">volume_up</span>
+</span>
+<div class="text-left">
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface">กดฟังคำแนะนำเสียง</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant font-medium">มีเสียงพูดช่วยนำทางทีละขั้นตอน</span>
+</div>
+</button>
+</div>
+</div>
+<form class="flex flex-col gap-10" id="senior-report-form" onsubmit="event.preventDefault(); handleFormSubmit();">
+<!-- STEP 1: Select Issue Category (Big Click Targets) -->
+<section class="bg-surface-container-lowest p-6 md:p-10 rounded-xl shadow-xl flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<span class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-md text-headline-md font-bold shrink-0 shadow-md">
+          1
+        </span>
+<div>
+<h2 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-on-surface font-extrabold">
+            ขั้นตอนที่ 1: เลือกปัญหาที่ท่านพบ (แตะเพียง 1 ช่อง)
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            แตะที่รูปภาพหรือข้อความที่ตรงกับปัญหาของท่านที่สุด
+          </p>
+</div>
+</div>
+<!-- Radio Grid with Rich Stylized Targets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" id="category-group" role="radiogroup">
+<!-- Option 1 -->
+<label class="category-card relative cursor-pointer p-6 rounded-xl bg-surface-container-low hover:bg-secondary-fixed transition-all flex flex-col items-center text-center gap-4 select-none shadow-sm group">
+<input checked="" class="sr-only" name="issue_category" type="radio" value="road_damage">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 1;">add_road</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface mb-1">หลุมบนถนน / ทางเท้าพัง</span>
+<span class="block font-body-md text-body-md text-on-surface-variant">เดินสะดุด หลุมลึก ฝาท่อแตก</span>
+</div>
+<div class="check-indicator mt-auto px-4 py-1.5 rounded-full font-label-md text-label-md font-bold flex items-center gap-1.5 bg-primary text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+            เลือกข้อนี้
+          </div>
+</label>
+<!-- Option 2 -->
+<label class="category-card relative cursor-pointer p-6 rounded-xl bg-surface-container-low hover:bg-secondary-fixed transition-all flex flex-col items-center text-center gap-4 select-none shadow-sm group">
+<input class="sr-only" name="issue_category" type="radio" value="streetlight_broken">
+<div class="w-20 h-20 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface mb-1">ไฟส่องทางดับ / ซอยมืด</span>
+<span class="block font-body-md text-body-md text-on-surface-variant">หลอดไฟขาด เสาไฟเอียงกะพริบ</span>
+</div>
+<div class="check-indicator mt-auto px-4 py-1.5 rounded-full font-label-md text-label-md font-bold flex items-center gap-1.5 bg-surface-container-highest text-on-surface">
+            แตะเพื่อเลือก
+          </div>
+</label>
+<!-- Option 3 -->
+<label class="category-card relative cursor-pointer p-6 rounded-xl bg-surface-container-low hover:bg-secondary-fixed transition-all flex flex-col items-center text-center gap-4 select-none shadow-sm group">
+<input class="sr-only" name="issue_category" type="radio" value="trash_overflow">
+<div class="w-20 h-20 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl text-tertiary" style="font-variation-settings: 'FILL' 1;">delete</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface mb-1">ขยะตกค้าง / ถังขยะล้น</span>
+<span class="block font-body-md text-body-md text-on-surface-variant">ส่งกลิ่นเหม็น ไม่มีคนมาเก็บ</span>
+</div>
+<div class="check-indicator mt-auto px-4 py-1.5 rounded-full font-label-md text-label-md font-bold flex items-center gap-1.5 bg-surface-container-highest text-on-surface">
+            แตะเพื่อเลือก
+          </div>
+</label>
+<!-- Option 4 -->
+<label class="category-card relative cursor-pointer p-6 rounded-xl bg-surface-container-low hover:bg-secondary-fixed transition-all flex flex-col items-center text-center gap-4 select-none shadow-sm group">
+<input class="sr-only" name="issue_category" type="radio" value="drainage_blocked">
+<div class="w-20 h-20 rounded-2xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 1;">waves</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface mb-1">ท่อระบายน้ำตัน / น้ำขัง</span>
+<span class="block font-body-md text-body-md text-on-surface-variant">ฝนตกน้ำไม่ไหล เออขังเน่าเสีย</span>
+</div>
+<div class="check-indicator mt-auto px-4 py-1.5 rounded-full font-label-md text-label-md font-bold flex items-center gap-1.5 bg-surface-container-highest text-on-surface">
+            แตะเพื่อเลือก
+          </div>
+</label>
+<!-- Option 5 -->
+<label class="category-card relative cursor-pointer p-6 rounded-xl bg-surface-container-low hover:bg-secondary-fixed transition-all flex flex-col items-center text-center gap-4 select-none shadow-sm group">
+<input class="sr-only" name="issue_category" type="radio" value="wires_trees_danger">
+<div class="w-20 h-20 rounded-2xl bg-error-container text-on-error-container flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface mb-1">กิ่งไม้หัก / สายไฟหย่อน</span>
+<span class="block font-body-md text-body-md text-on-surface-variant">เสี่ยงอันตราย บังทางสัญจร</span>
+</div>
+<div class="check-indicator mt-auto px-4 py-1.5 rounded-full font-label-md text-label-md font-bold flex items-center gap-1.5 bg-surface-container-highest text-on-surface">
+            แตะเพื่อเลือก
+          </div>
+</label>
+<!-- Option 6 (Other) -->
+<label class="category-card relative cursor-pointer p-6 rounded-xl bg-surface-container-low hover:bg-secondary-fixed transition-all flex flex-col items-center text-center gap-4 select-none shadow-sm group">
+<input class="sr-only" name="issue_category" type="radio" value="other">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-highest text-on-surface flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-5xl">more_horiz</span>
+</div>
+<div>
+<span class="block font-headline-sm text-headline-sm font-bold text-on-surface mb-1">ปัญหาอื่นๆ ทั่วไป</span>
+<span class="block font-body-md text-body-md text-on-surface-variant">พิมพ์บอกหรือพูดด้วยเสียง</span>
+</div>
+<div class="check-indicator mt-auto px-4 py-1.5 rounded-full font-label-md text-label-md font-bold flex items-center gap-1.5 bg-surface-container-highest text-on-surface">
+            แตะเพื่อเลือก
+          </div>
+</label>
+</div>
+</section>
+<!-- STEP 2: Voice Input & Description Assistant -->
+<section class="bg-surface-container-lowest p-6 md:p-10 rounded-xl shadow-xl flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<span class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-md text-headline-md font-bold shrink-0 shadow-md">
+          2
+        </span>
+<div>
+<h2 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-on-surface font-extrabold">
+            ขั้นตอนที่ 2: บอกรายละเอียด (พูดด้วยเสียงได้เลย)
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            หากพิมพ์ไม่สะดวก สามารถกดปุ่มไมโครโฟนสีแดงแล้วพูดได้ทันที
+          </p>
+</div>
+</div>
+<!-- Giant Microphone Trigger Banner -->
+<div class="w-full bg-surface-container p-6 md:p-8 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+<div class="flex items-center gap-5">
+<button aria-label="กดปุ่มเพื่อเริ่มพูดด้วยเสียง" class="w-24 h-24 md:w-28 md:h-28 rounded-full bg-error text-on-error flex flex-col items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all shrink-0 relative overflow-hidden" id="voice-mic-trigger" type="button">
+<span class="material-symbols-outlined text-5xl md:text-6xl animate-pulse">mic</span>
+<span class="font-label-sm text-label-sm font-bold uppercase mt-1 tracking-wider">แตะพูด</span>
+</button>
+<div>
+<h3 class="font-headline-sm text-headline-sm md:font-headline-md md:text-headline-md font-bold text-on-surface">
+              กดปุ่มสีแดง แล้วพูดปัญหาของท่าน
+            </h3>
+<p class="font-body-md text-body-md md:font-body-lg md:text-body-lg text-on-surface-variant mt-1">
+              ระบบแปลงคำพูดภาษาไทยอัตโนมัติ ไม่ต้องกังวลเรื่องสะกดคำ
+            </p>
+<div class="hidden mt-2 inline-flex items-center gap-2 px-3 py-1 bg-error-container text-on-error-container rounded-full font-label-md text-label-md font-bold" id="recording-status">
+<span class="w-3 h-3 rounded-full bg-error animate-ping"></span>
+              กำลังฟังเสียงพูดของคุณตาคุณยาย...
+            </div>
+</div>
+</div>
+<div class="hidden lg:flex flex-col items-end text-right">
+<span class="px-4 py-2 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold rounded-lg shadow-sm">
+            รองรับสำเนียงทุกภาค
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">ภาคกลาง • เหนือ • อีสาน • ใต้</span>
+</div>
+</div>
+<!-- Textbox Area with Large Senior-Friendly Fonts -->
+<div class="flex flex-col gap-2">
+<label class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center justify-between" for="issue-description">
+<span class="">ข้อความรายละเอียดของปัญหา:</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-normal">แก้ไขข้อความได้ตลอดเวลา</span>
+</label>
+<textarea class="w-full p-5 bg-surface-container-low text-on-surface rounded-xl font-body-xl text-body-xl leading-relaxed focus:bg-surface-container-lowest focus:ring-4 focus:ring-primary-container outline-none transition-all shadow-inner" id="issue-description" name="issue_description" placeholder="ตัวอย่างเช่น: มีหลุมลึกตรงปากทางเข้าซอยเทศบาล 4 รถจักรยานยนต์เกือบล้มบ่อยมาก..." rows="4"></textarea>
+</div>
+</section>
+<!-- STEP 3: Simple Photo Upload with Real-time Camera Access -->
+<section class="bg-surface-container-lowest p-6 md:p-10 rounded-xl shadow-xl flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<span class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-md text-headline-md font-bold shrink-0 shadow-md">
+          3
+        </span>
+<div>
+<h2 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-on-surface font-extrabold">
+            ขั้นตอนที่ 3: ถ่ายรูปปัญหา (มีหรือไม่มีก็ได้)
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            ถ่ายภาพเพื่อให้ช่างเข้าใจจุดเกิดเหตุได้รวดเร็ว หรือแนบรูปจากอัลบั้ม
+          </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Giant Camera Button -->
+<label class="cursor-pointer flex flex-col items-center justify-center p-8 bg-surface-container-low hover:bg-surface-container rounded-xl shadow-md transition-all active:scale-[0.99] group text-center min-h-[220px]">
+<input accept="image/*" capture="environment" class="sr-only" id="photo-file" onchange="previewSelectedPhoto(this)" type="file">
+<div class="w-20 h-20 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform mb-4">
+<span class="material-symbols-outlined text-5xl">photo_camera</span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface block mb-1">
+            แตะตรงนี้เพื่อเปิดกล้องถ่ายภาพ
+          </span>
+<span class="font-body-lg text-body-lg text-on-surface-variant block">
+            หรือเลือกจากรูปที่มีอยู่ในโทรศัพท์
+          </span>
+</label>
+<!-- Preview Card or Reference Example -->
+<div class="bg-surface-container-low rounded-xl p-5 flex flex-col items-center justify-center text-center shadow-inner relative overflow-hidden min-h-[220px]" id="photo-preview-box">
+<img alt="ตัวอย่างภาพถ่ายปัญหา" class="w-full h-48 object-cover rounded-lg shadow-md mb-3" data-alt="A vivid high-contrast Thai urban pavement pothole clearly captured during daytime with yellow safety markings on asphalt, clear documentary civic report style" id="preview-img-display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOR4juyqubOeGBkmLrZrS-le-18RNo3tzzrEnUcmcQVbWhte8mttUEEzvMf29egTKYUt-5zOKjgkmKFAUZcG4Ps6QJYvT2jNQ0q-i1cEw8iMbhrUBTTepsZ_4OEdcbVeijukf_djL9AQe7iiJRQDh0RKjupTQNm1P47NKqybh-XrikUXxH4s7DNTTrxa8KPsxdFlZaaeEk-ACHlV_omQ2gDmWn1FXiHAvHVZUOHuOZoL_dgAho1i0j">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-2xl">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface font-bold" id="preview-caption">
+              ตัวอย่างภาพที่ชัดเจน: ควรถ่ายให้เห็นพื้นผิวและจุดสังเกต
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 4: Simplified Location (Auto-detect + Familiar Landmark) -->
+<section class="bg-surface-container-lowest p-6 md:p-10 rounded-xl shadow-xl flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<span class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-md text-headline-md font-bold shrink-0 shadow-md">
+          4
+        </span>
+<div>
+<h2 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-on-surface font-extrabold">
+            ขั้นตอนที่ 4: สถานที่เกิดเหตุ
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            กดปุ่มหาตำแหน่งอัตโนมัติ หรือพิมพ์ชื่อสถานที่ใกล้เคียงที่จำง่าย
+          </p>
+</div>
+</div>
+<!-- Quick Geo Button -->
+<button class="w-full py-5 px-8 bg-tertiary text-on-tertiary rounded-xl shadow-lg hover:bg-tertiary-container transition-transform active:scale-[0.99] flex items-center justify-center gap-4 font-headline-md text-headline-md font-bold" id="auto-gps-btn" onclick="detectCurrentLocation()" type="button">
+<span class="material-symbols-outlined text-4xl">my_location</span>
+<span class="">กดเพื่อระบุตำแหน่งของฉันตอนนี้ทันที</span>
+</button>
+<div class="p-4 bg-tertiary-fixed text-on-tertiary-fixed rounded-xl flex items-center gap-3 shadow-sm" id="gps-status-pill">
+<span class="material-symbols-outlined text-3xl text-tertiary">location_on</span>
+<div>
+<span class="font-label-lg text-label-lg font-bold block">ตรวจพบพิกัดปัจจุบันแล้ว:</span>
+<span class="font-body-lg text-body-lg font-semibold" id="gps-address-text">ใกล้ชุมชนท้ายบ้าน ซอย 14 ตำบลปากน้ำ อำเภอเมืองสมุทรปราการ จังหวัดสมุทรปราการ</span>
+</div>
+</div>
+<!-- Landmark Description Input -->
+<div class="flex flex-col gap-2 mt-2">
+<label class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-2" for="landmark-input">
+<span class="material-symbols-outlined text-primary text-2xl">storefront</span>
+<span class="">จุดสังเกตใกล้เคียง (ช่วยให้ช่างหาเจอง่ายขึ้น):</span>
+</label>
+<input class="w-full h-16 px-6 bg-surface-container-low text-on-surface rounded-xl font-body-xl text-body-xl focus:bg-surface-container-lowest focus:ring-4 focus:ring-primary-container outline-none transition-all shadow-inner" id="landmark-input" name="landmark_input" placeholder="เช่น หน้าตลาดปากน้ำ, ตรงข้ามร้านขายยา, ถนนท้ายบ้าน ซอย 12" type="text">
+</div>
+<!-- Location Map Context Graphic -->
+<div class="w-full h-56 rounded-xl overflow-hidden shadow-md" data-location="Bangkok, Thailand" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNfIalYz7hfTsqcPjnQIDKxkbd5TeLy_0ozXrMIwyC1I8Zt36BYtOLRLxjEUB28YIFQ-wP84Z2uxCY5G7P7z955p4GUp79W-7ocZHFUNUXjL1IDAyCeHHM0ZvG4wWR4nVgYqiZLr8xmNEjkUvyudwiA3bOD1p2C73JAFWqTopkZ_CsuhTV8WVgj-tiqManGlQr-d-S15Tec68z2RLvtXoUM9tHOruF7lNqB9cQih__9e0Suvf_KQf1')"></div>
+</section>
+<!-- STEP 5: Phone Number for SMS Confirmation (Optional) -->
+<section class="bg-surface-container-lowest p-6 md:p-10 rounded-xl shadow-xl flex flex-col gap-6">
+<div class="flex items-center gap-4">
+<span class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-md text-headline-md font-bold shrink-0 shadow-md">
+          5
+        </span>
+<div>
+<h2 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-on-surface font-extrabold">
+            ขั้นตอนที่ 5: เบอร์โทรสำหรับรับ SMS แจ้งเตือน (ถ้ามี)
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            เจ้าหน้าที่จะส่งข้อความแจ้งเมื่อกำลังเดินทางมาแก้ไข (ไม่จำเป็นต้องกรอก แต่แนะนำ)
+          </p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="relative w-full max-w-xl">
+<div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-3xl">phone_iphone</span>
+</div>
+<input class="w-full h-18 pl-16 pr-6 bg-surface-container-low text-on-surface rounded-xl font-headline-md text-headline-md tracking-wider focus:bg-surface-container-lowest focus:ring-4 focus:ring-primary-container outline-none transition-all shadow-inner" id="senior-phone" maxlength="12" name="senior_phone" oninput="formatThaiPhoneNumber(this)" placeholder="081-234-5678" type="tel">
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl text-tertiary">lock</span>
+<span class="font-body-md text-body-md">ข้อมูลของท่านปลอดภัย ใช้เพื่อการประสานงานซ่อมแซมเท่านั้น</span>
+</div>
+</div>
+</section>
+<!-- Giant Primary Submission CTA -->
+<div class="flex flex-col gap-4 mt-4">
+<button class="w-full min-h-[80px] p-6 bg-primary-container text-on-primary rounded-xl shadow-2xl hover:bg-primary transition-all active:scale-[0.98] flex items-center justify-center gap-4 text-center" id="submit-senior-report-btn" type="submit">
+<span class="material-symbols-outlined text-4xl md:text-5xl">send</span>
+<span class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg font-black tracking-tight">
+          ส่งเรื่องแจ้งปัญหาทันที (ฟรี • ไม่มีค่าใช้จ่าย)
+        </span>
+</button>
+<p class="text-center font-body-lg text-body-lg text-on-surface-variant font-medium">
+        เมื่อกดส่งแล้ว ท่านจะได้รับหมายเลขติดตามเรื่องทันที สามารถแจ้งเรื่องได้ตลอด 24 ชั่วโมง
+      </p>
+</div>
+</form>
+<!-- Success Notification Modal / Overlay (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/80 backdrop-blur-sm hidden items-center justify-center p-4" id="senior-success-dialog">
+<div class="bg-surface-container-lowest max-w-xl w-full p-8 md:p-10 rounded-xl shadow-2xl flex flex-col items-center text-center gap-6 animate-bounce-short">
+<div class="w-24 h-24 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-6xl">verified</span>
+</div>
+<div>
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold mb-3 shadow-sm">
+          เจ้าหน้าที่ได้รับเรื่องแล้ว
+        </span>
+<h3 class="font-headline-lg text-headline-lg md:font-headline-xl md:text-headline-xl font-black text-on-surface">
+          ขอบพระคุณที่ช่วยดูแลชุมชน!
+        </h3>
+<p class="font-body-xl text-body-xl text-on-surface-variant mt-2">
+          เรื่องของท่านรหัส: <strong class="text-primary font-headline-md text-headline-md">#FX-8842</strong>
+</p>
+</div>
+<div class="w-full bg-surface-container p-5 rounded-xl text-left flex flex-col gap-2">
+<div class="flex items-center gap-2 text-on-surface font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-tertiary">schedule</span>
+<span class="">ขั้นตอนต่อไป:</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          เจ้าหน้าที่เขตรับเรื่องเข้าคิวแล้ว และจะประสานทีมช่างเข้าตรวจสอบภายใน 24-48 ชั่วโมง
+        </p>
+</div>
+<button class="w-full py-5 bg-primary-container text-on-primary rounded-xl font-headline-md text-headline-md font-bold shadow-lg hover:bg-primary transition-all" onclick="closeSuccessModal()" type="button">
+        ตกลง กลับสู่หน้าแรก
+      </button>
+</div>
+</div>
+<!-- Bottom Fast Emergency Assistance Banner -->
+<div class="mt-16 p-6 md:p-8 bg-error-container text-on-error-container rounded-xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 rounded-full bg-error text-on-error flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-4xl">e911_emergency</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md font-extrabold text-on-error-container">
+          หากเป็นเหตุด่วนมาก ไฟไหม้ สัตว์ร้าย หรือคนหมดสติ
+        </h4>
+<p class="font-body-lg text-body-lg text-on-error-container font-semibold mt-1">
+          ไม่ต้องพิมพ์หรือกรอกแบบฟอร์ม แตะโทรออกที่เบอร์ด้านข้างได้ทันที (โทรฟรีตลอด 24 ชม.)
+        </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-4 w-full md:w-auto">
+<a class="flex-1 md:flex-none px-6 py-4 bg-on-surface text-surface rounded-xl font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-2 shadow-md hover:scale-105 transition-transform" href="tel:199">
+<span class="material-symbols-outlined">fire_extinguisher</span>
+        ดับเพลิง 199
+      </a>
+<a class="flex-1 md:flex-none px-6 py-4 bg-error text-on-error rounded-xl font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-2 shadow-md hover:scale-105 transition-transform" href="tel:1669">
+<span class="material-symbols-outlined">ambulance</span>
+        กู้ชีพฉุกเฉิน 1669
+      </a>
+</div>
+</div>
+</div>
+<script>
+  // Senior Mode Client Micro-Interactions
+
+  // 1. Radio Card Selection Visual Feedback
+  document.querySelectorAll('input[name="issue_category"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      document.querySelectorAll('.category-card').forEach(card => {
+        const indicator = card.querySelector('.check-indicator');
+        if (card.contains(radio)) {
+          card.classList.add('bg-secondary-fixed');
+          card.classList.remove('bg-surface-container-low');
+          indicator.className = 'check-indicator mt-auto px-4 py-1.5 rounded-full font-label-md text-label-md font-bold flex items-center gap-1.5 bg-primary text-on-primary shadow-sm';
+          indicator.innerHTML = '<span class="material-symbols-outlined text-xl">check_circle</span> เลือกข้อนี้';
+        } else {
+          card.classList.remove('bg-secondary-fixed');
+          card.classList.add('bg-surface-container-low');
+          indicator.className = 'check-indicator mt-auto px-4 py-1.5 rounded-full font-label-md text-label-md font-bold flex items-center gap-1.5 bg-surface-container-highest text-on-surface';
+          indicator.innerHTML = 'แตะเพื่อเลือก';
+        }
+      });
+    });
+  });
+
+  // 2. Big Voice Recording Simulation with Thai Prompts
+  const micBtn = document.getElementById('voice-mic-trigger');
+  const recordStatus = document.getElementById('recording-status');
+  const issueTextarea = document.getElementById('issue-description');
+  let isRecording = false;
+
+  if (micBtn) {
+    micBtn.addEventListener('click', function() {
+      isRecording = !isRecording;
+      if (isRecording) {
+        micBtn.classList.remove('bg-error');
+        micBtn.classList.add('bg-tertiary');
+        recordStatus.classList.remove('hidden');
+        recordStatus.innerHTML = '<span class="w-3 h-3 rounded-full bg-tertiary animate-ping"></span> กำลังฟังเสียงพูด... พูดได้เลยครับ/ค่ะ';
+        
+        // Simulated speech transcription after 3 seconds
+        setTimeout(() => {
+          if (isRecording) {
+            issueTextarea.value = "มีฝาท่อระบายน้ำชำรุดทรุดตัว อยู่บริเวณทางเข้าซอยข้างร้านขายของชำ เดินผ่านตอนเย็นมืดแล้วกลัวตกมาก ช่วยมาดูหน่อยครับ";
+            recordStatus.innerHTML = '<span class="material-symbols-outlined text-lg text-tertiary">check</span> แปลงเสียงพูดเป็นข้อความเรียบร้อยแล้ว';
+            micBtn.classList.remove('bg-tertiary');
+            micBtn.classList.add('bg-error');
+            isRecording = false;
+          }
+        }, 3200);
+      } else {
+        micBtn.classList.remove('bg-tertiary');
+        micBtn.classList.add('bg-error');
+        recordStatus.classList.add('hidden');
+      }
+    });
+  }
+
+  // 3. Audio Narration Guide Assistant
+  const playSpeechBtn = document.getElementById('play-speech-btn');
+  if (playSpeechBtn) {
+    playSpeechBtn.addEventListener('click', function() {
+      if ('speechSynthesis' in window) {
+        const text = "สวัสดีครับคุณตาคุณยาย ยินดีต้อนรับสู่ระบบแจ้งปัญหาชุมชน กรุณาแตะเลือกปัญหาที่พบ จากนั้นกดปุ่มสีแดงเพื่อพูดรายละเอียดได้เลยครับ";
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'th-TH';
+        utterance.rate = 0.9; // Slower cadence for seniors
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert("คำแนะนำ: กดปุ่มข้อ 1 เพื่อเลือกปัญหา และกดปุ่มไมโครโฟนสีแดงเพื่อพูดแทนการพิมพ์ครับ");
+      }
+    });
+  }
+
+  // 4. Current Location Detection Simulation
+  function detectCurrentLocation() {
+    const gpsAddress = document.getElementById('gps-address-text');
+    const autoGpsBtn = document.getElementById('auto-gps-btn');
+    
+    autoGpsBtn.innerHTML = '<span class="material-symbols-outlined text-4xl animate-spin">refresh</span><span>กำลังค้นหาพิกัดดาวเทียม...</span>';
+    
+    setTimeout(() => {
+      autoGpsBtn.innerHTML = '<span class="material-symbols-outlined text-4xl">check_circle</span><span>ระบุตำแหน่งสำเร็จเรียบร้อยแล้ว</span>';
+      autoGpsBtn.classList.replace('bg-tertiary', 'bg-tertiary-container');
+      if (gpsAddress) {
+        gpsAddress.textContent = "หมุดปัจจุบัน: ถนนรามอินทรา ซอย 40 แยก 3 แขวงนวลจันทร์ เขตบึงกุ่ม กรุงเทพมหานคร";
+      }
+    }, 1200);
+  }
+
+  // 5. Photo Upload Preview
+  function previewSelectedPhoto(input) {
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const previewImg = document.getElementById('preview-img-display');
+        const caption = document.getElementById('preview-caption');
+        if (previewImg) {
+          previewImg.src = e.target.result;
+          previewImg.classList.remove('hidden');
+        }
+        if (caption) {
+          caption.textContent = "แนบรูปถ่ายสำเร็จ: พร้อมส่งให้เจ้าหน้าที่ตรวจสอบ";
+        }
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  // 6. Senior-Friendly Phone Formatter
+  function formatThaiPhoneNumber(input) {
+    let val = input.value.replace(/\D/g, '');
+    if (val.length > 3 && val.length <= 6) {
+      input.value = val.slice(0, 3) + '-' + val.slice(3);
+    } else if (val.length > 6) {
+      input.value = val.slice(0, 3) + '-' + val.slice(3, 6) + '-' + val.slice(6, 10);
+    } else {
+      input.value = val;
+    }
+  }
+
+  // 7. Submission Dialog Management
+  function handleFormSubmit() {
+    const dialog = document.getElementById('senior-success-dialog');
+    if (dialog) {
+      dialog.classList.remove('hidden');
+      dialog.classList.add('flex');
+    }
+  }
+
+  function closeSuccessModal() {
+    const dialog = document.getElementById('senior-success-dialog');
+    if (dialog) {
+      dialog.classList.add('hidden');
+      dialog.classList.remove('flex');
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script></div></main><footer class="w-full bg-surface-container-high border-t-2 border-on-surface py-10"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"><div class="border-2 border-on-surface bg-surface-container-lowest p-6 rounded-lg shadow-[4px_4px_0_0_#1c1b1b]"><div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-primary text-3xl">contact_support</span><h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">ช่วยเหลือและคำแนะนำ</h3></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">หากผู้สูงอายุหรือญาติไม่สะดวกพิมพ์ข้อความ สามารถโทรแจ้งเรื่องผ่านเจ้าหน้าที่คอลเซ็นเตอร์ได้โดยตรงตลอด 24 ชั่วโมง มีเจ้าหน้าที่คอยพูดคุยและบันทึกข้อมูลให้</p><div class="flex items-center gap-2 font-label-md text-label-md text-primary font-bold"><span class="material-symbols-outlined">support_agent</span><span class="">บริการผู้ช่วยเสียงและเจ้าหน้าที่อำนวยความสะดวก</span></div></div><div class="border-2 border-on-surface bg-secondary-fixed p-6 rounded-lg shadow-[4px_4px_0_0_#1c1b1b]"><div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-on-secondary-fixed text-3xl">phone_in_talk</span><h3 class="font-headline-sm text-headline-sm font-bold text-on-secondary-fixed">เบอร์สายด่วนสำคัญ</h3></div><ul class="space-y-2 font-body-md text-body-md text-on-secondary-fixed font-bold"><li class="flex items-center justify-between border-b border-on-secondary-fixed/20 pb-1"><span class="">ศูนย์รับเรื่อง เทศบาลนครสมุทรปราการ</span><a class="underline text-headline-sm" href="tel:023826199">02-382-6199</a></li><li class="flex items-center justify-between border-b border-on-secondary-fixed/20 pb-1"><span class="">แจ้งเหตุเพลิงไหม้-สัตว์มีพิษ</span><a class="underline text-headline-sm" href="tel:199">199</a></li><li class="flex items-center justify-between"><span class="">สายด่วนการแพทย์ฉุกเฉิน (ฟรี)</span><a class="underline text-headline-sm" href="tel:1669">1669</a></li></ul></div><div class="border-2 border-on-surface bg-surface-container-lowest p-6 rounded-lg shadow-[4px_4px_0_0_#1c1b1b]"><div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-tertiary text-3xl">verified_user</span><h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">มาตรฐานความโปร่งใส</h3></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">FixLoop มุ่งมั่นเชื่อมโยงเสียงของประชาชนทุกช่วงวัยสู่การแก้ปัญหาจริง เจ้าหน้าที่ตรวจสอบและอัปเดตสถานะทุกขั้นตอนอย่างเปิดเผย</p><span class="inline-block px-3 py-1 bg-surface-container text-on-surface font-label-sm text-label-sm font-bold border border-on-surface rounded">เวอร์ชัน 2.4 (เวอร์ชันมิตรภาพเพื่อผู้สูงวัย)</span></div></div><div class="text-center border-t border-outline-variant pt-6 text-on-surface font-body-sm text-body-sm">© 2025 FixLoop - เทคโนโลยีเพื่อประชาชนเพื่อสังคมที่เป็นธรรมและทั่วถึง</div></div></footer>
+
+
+</body></html>

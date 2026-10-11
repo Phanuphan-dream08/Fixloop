@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_blank" name="shell-type"><title>FixLoop - แจ้งปัญหาโครงสร้างพื้นฐาน</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#ffffff","on-surface":"#1c1b1b","surface-container-high":"#eae7e7","on-primary":"#ffffff","inverse-primary":"#b8c4ff","secondary-fixed-dim":"#e9c339","tertiary":"#005d25","surface":"#fcf9f8","on-surface-variant":"#434656","primary-container":"#2457f5","outline-variant":"#c4c5d8","secondary-fixed":"#ffe07e","primary-fixed-dim":"#b8c4ff","inverse-on-surface":"#f3f0ef","outline":"#747687","secondary":"#725c00","inverse-surface":"#313030","error":"#ba1a1a","on-background":"#1c1b1b","on-tertiary-fixed":"#002109","on-error-container":"#93000a","on-error":"#ffffff","surface-container-low":"#f6f3f2","surface-container-lowest":"#ffffff","surface-variant":"#e5e2e1","tertiary-fixed-dim":"#62df7d","surface-container-highest":"#e5e2e1","surface-container":"#f0eded","on-secondary-container":"#735d00","surface-dim":"#dcd9d9","on-tertiary-container":"#8fffa1","surface-tint":"#0f4ceb","secondary-container":"#fed74c","surface-bright":"#fcf9f8","on-primary-container":"#e4e6ff","on-secondary-fixed-variant":"#564500","tertiary-fixed":"#7ffc97","background":"#fcf9f8","on-secondary-fixed":"#231b00","primary":"#003ece","tertiary-container":"#007833","primary-fixed":"#dde1ff","on-primary-fixed":"#001453","on-tertiary-fixed-variant":"#005320","on-tertiary":"#ffffff","error-container":"#ffdad6","on-primary-fixed-variant":"#0037b9"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter":"1rem","margin-desktop":"3rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","space-lg":"1.5rem","margin-tablet":"2rem","margin":"1rem","space-xl":"2.5rem","space-sm":"0.5rem","space-md":"1rem"},"fontFamily":{"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"],"headline-xl":["Space Grotesk"],"body-lg":["Plus Jakarta Sans"],"label-md":["Space Grotesk"],"label-sm":["Space Grotesk"],"label-lg":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-xl":["20px",{"lineHeight":"32px","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"700"}],"label-lg":["16px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"700"}]}}}}</script></head><body class="bg-surface text-on-surface antialiased" style="font-family: &quot;Noto Sans Thai&quot;, sans-serif !important;"><style>
+  body, h1, h2, h3, h4, p, span, div, button, a, label, strong {
+    font-family: 'Noto Sans Thai', sans-serif !important;
+  }
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important;
+  }
+</style><main class="w-full min-h-screen bg-surface flex flex-col justify-center items-center p-margin md:p-margin-tablet"><div class="flex flex-col w-full">
+<div class="w-full max-w-3xl mx-auto py-space-md sm:py-space-xl">
+<!-- Top Utility: Accessibility Notice / Easy-Read Indicator -->
+<div class="flex items-center justify-between mb-space-md bg-secondary-container text-on-surface px-space-md py-space-sm rounded-lg shadow-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-headline-sm" style="font-variation-settings: 'FILL' 1;">elderly</span>
+<span class="font-label-md text-label-md">โหมดอ่านง่าย (ขนาดตัวอักษรใหญ่พิเศษ &amp; คอนทราสต์สูงเพื่อทุกวัย)</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-on-surface px-space-sm py-0.5 rounded uppercase tracking-wider">กำลังเปิดใช้งาน</span>
+</div>
+<!-- Main Brutalist Success Shell Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden relative">
+<!-- Top Colored Accent Bar with Visual Metric -->
+<div class="bg-secondary-container px-space-lg py-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface text-headline-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">บันทึกข้อมูลเข้าสู่ระบบสำเร็จ</span>
+</div>
+<div class="bg-surface-container-lowest px-space-sm py-1 rounded font-label-sm text-label-sm text-on-surface">
+          ลำดับที่ #1,492 ของเขตนี้
+        </div>
+</div>
+<!-- Hero Artwork & Success Statement Header -->
+<div class="p-space-lg sm:p-space-xl flex flex-col items-center text-center">
+<!-- Custom Editorial Civic Neo-Brutalist Vector Illustration -->
+<div class="relative w-40 h-40 mb-space-md flex items-center justify-center">
+<svg class="w-full h-full drop-shadow-md" fill="none" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+<!-- Warm circle aura -->
+<circle cx="80" cy="80" fill="#FFE07E" r="70"></circle>
+<circle cx="80" cy="80" fill="#FCF9F8" r="54"></circle>
+<!-- Graphic burst accents -->
+<path d="M80 10V24M80 136V150M10 80H24M136 80H150M30 30L40 40M120 120L130 130M30 130L40 120M120 40L130 30" stroke="#1C1B1B" stroke-linecap="round" stroke-width="4"></path>
+<!-- Phone Graphic -->
+<rect fill="#2457F5" height="84" rx="6" width="56" x="52" y="38"></rect>
+<rect fill="#FFFFFF" height="60" rx="3" width="44" x="58" y="46"></rect>
+<!-- Screen Civic Scan Mini Target -->
+<rect fill="#1C1B1B" height="12" width="12" x="64" y="52"></rect>
+<rect fill="#1C1B1B" height="12" width="12" x="84" y="52"></rect>
+<rect fill="#1C1B1B" height="12" width="12" x="64" y="72"></rect>
+<rect fill="#FED74C" height="16" width="16" x="80" y="68"></rect>
+<!-- Big Success Check Pill Tag Over Phone -->
+<rect fill="#007833" height="34" rx="4" width="88" x="36" y="94"></rect>
+<path d="M52 110L62 120L84 98" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path>
+<circle cx="106" cy="111" fill="#FFE07E" r="5"></circle>
+</svg>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-space-xs">
+          แจ้งปัญหาสำเร็จแล้ว!
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          คุณสามารถติดตามความคืบหน้าของเรื่องนี้ได้ทุกเมื่อ โดยไม่ต้องลงทะเบียนหรือจำรหัสผ่าน เจ้าหน้าที่ชุมชนได้รับพิกัดและข้อมูลเบื้องต้นเรียบร้อยแล้ว
+        </p>
+</div>
+<!-- Section: Reference Number & Current Status -->
+<div class="px-space-lg sm:px-space-xl pb-space-lg">
+<div class="bg-surface-container-low p-space-md sm:p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-md">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant block mb-1">
+                รหัสอ้างอิงรายงานของคุณ (Reference ID)
+              </span>
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-lg text-headline-lg bg-surface-container-lowest text-primary px-space-md py-1 rounded tracking-wider shadow-sm select-all" id="ref-code">
+                  FIX-2025-08492
+                </span>
+<button class="bg-surface-container-lowest hover:bg-surface-container active:scale-95 text-on-surface font-label-md text-label-md h-12 px-space-md rounded shadow-md flex items-center gap-space-xs transition-transform" id="btn-copy-code" onclick="navigator.clipboard.writeText('FIX-2025-08492'); showToast('คัดลอกรหัสอ้างอิงแล้ว');" title="คัดลอกรหัส">
+<span class="material-symbols-outlined text-headline-sm">content_copy</span>
+<span class="">คัดลอกรหัส</span>
+</button>
+</div>
+</div>
+<!-- Current Status Chip -->
+<div class="flex flex-col sm:items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">สถานะปัจจุบัน</span>
+<span class="inline-flex items-center gap-1.5 bg-secondary-container text-on-surface font-headline-sm text-headline-sm px-space-md py-1.5 rounded shadow-sm whitespace-nowrap shrink-0" style="white-space: nowrap;"><span class="material-symbols-outlined text-headline-sm shrink-0" style="font-variation-settings: 'FILL' 1;">hourglass_top</span>รอเจ้าหน้าที่ตรวจสอบ</span>
+</div>
+</div>
+<div class="pt-space-sm bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-primary text-headline-sm">info</span>
+<span class="font-body-md text-body-md font-medium">เจ้าหน้าที่เทศกิจ/หน่วยงานประจำเขตกำลังจัดสรรคิวตรวจสอบภายใน 24 ชม.</span>
+</div>
+</div>
+</div>
+<!-- High-Contrast QR Code Display Block -->
+<div class="px-space-lg sm:px-space-xl pb-space-lg">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center">
+<!-- Graphic QR Container (200x200 styling) -->
+<div class="md:col-span-5 flex flex-col items-center">
+<div class="p-space-sm bg-surface-container-lowest rounded-lg shadow-md inline-block">
+<!-- SVG High Contrast Precise QR Representation -->
+<img src="https://lh3.googleusercontent.com/aida/AEtjO1We290OiIaqCt9YO8IE-duRmDDELV2cYJ9PeUO9963yF0n1ByX9VvfNTg7TmBTnAHd2J-XJwvxi5xiuJoVax1DVwnhkWqLIXfDL11S-u3W4mo75jgRX-g4HQd3TkkBAHDPIzAjfbxq9clCzDf8Lqg9Pk6SevqXAMAC-oJMl_0djihxtTfiL1o7ssK9lq_xIL4qUV2gki3SM5Ks0lw1Rk_u9SVReINwmf8AO4uzh7tS8-IWYgYecQg0qD_k" alt="QR Code ติดตามเรื่อง FIX-2025-08492" class="w-48 h-48 sm:w-56 sm:h-56 mx-auto object-contain p-2 bg-white rounded-lg border-2 border-slate-900 shadow-sm">
+</div>
+<span class="font-label-sm text-label-sm text-on-surface mt-space-xs font-bold">
+                สแกนเพื่อบันทึกหรือติดตามบนมือถือ
+              </span>
+</div>
+<!-- Contextual Text & Direct Link Copy -->
+<div class="md:col-span-7 flex flex-col justify-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">
+                เซฟหน้านี้ไว้ เพื่อดูผลงานของเขต
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                บันทึก QR Code นี้ไว้ในรูปภาพมือถือ เพื่อกลับมาตรวจสอบภาพถ่ายขณะซ่อมแซมได้ทันทีโดยไม่ต้องจำรหัส
+              </p>
+<!-- Link Box with Copy Button -->
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center justify-between gap-space-xs">
+<div class="overflow-hidden">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase">ลิงก์ติดตามสถานะโดยตรง</span>
+<span class="font-label-md text-label-md text-primary truncate block font-mono" id="track-url">
+                    fixloop.thai/track/FIX-2025-08492
+                  </span>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface-container-low text-on-surface h-10 px-space-sm rounded font-label-sm text-label-sm shadow-sm flex items-center gap-1 active:scale-95 shrink-0 transition-transform" onclick="navigator.clipboard.writeText('https://fixloop.thai/track/FIX-2025-08492'); showToast('คัดลอกลิงก์แล้ว');">
+<span class="material-symbols-outlined text-headline-sm">link</span>
+<span class="">คัดลอก</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button Group (High touch target >= 48px) -->
+<div class="px-space-lg sm:px-space-xl pb-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Primary Action: Download QR -->
+<button class="h-14 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-lg shadow-md hover:bg-primary-container active:scale-95 flex items-center justify-center gap-space-xs transition-transform cursor-pointer" onclick="showToast('ดาวน์โหลด QR Code สำเร็จ');">
+<span class="material-symbols-outlined text-headline-md">download</span>
+<span class="">บันทึก QR Code</span>
+</button>
+<!-- Secondary Action: Share / Copy Link -->
+<button class="h-14 bg-secondary-container text-on-surface font-headline-sm text-headline-sm rounded-lg shadow-md hover:bg-secondary-fixed active:scale-95 flex items-center justify-center gap-space-xs transition-transform cursor-pointer" onclick="navigator.clipboard.writeText('https://fixloop.thai/track/FIX-2025-08492'); showToast('คัดลอกลิงก์ติดตามสำเร็จ');">
+<span class="material-symbols-outlined text-headline-md">share</span>
+<span class="">ส่งต่อให้เพื่อนบ้าน</span>
+</button>
+<!-- Tertiary Action: View Public Track Page -->
+<button class="h-14 bg-surface-container-highest text-on-surface font-headline-sm text-headline-sm rounded-lg shadow-md hover:bg-surface-container-high active:scale-95 flex items-center justify-center gap-space-xs transition-transform cursor-pointer" onclick="window.scrollTo({top: 400, behavior: 'smooth'}); showToast('เปิดหน้าสถานะ');">
+<span class="material-symbols-outlined text-headline-md">visibility</span>
+<span class="">ดูสถานะสด</span>
+</button>
+</div>
+<!-- Back to Home / Add More -->
+<div class="text-center mt-space-md">
+<a class="inline-flex items-center gap-space-xs font-headline-sm text-headline-sm text-primary hover:underline py-space-sm px-space-md" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="">แจ้งปัญหาเรื่องอื่นเพิ่มเติมในจุดนี้</span>
+</a>
+</div>
+</div>
+<!-- Step-by-Step Civic Process Timeline Checklist -->
+<div class="bg-surface-container-low p-space-lg sm:p-space-xl">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">alt_route</span>
+<span class="">ขั้นตอนการดำเนินงานของ FixLoop</span>
+</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm relative">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-surface font-headline-sm text-headline-sm flex items-center justify-center font-bold">1</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">กำลังดำเนินการ</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">ลงพื้นที่ตรวจสอบ</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">เจ้าหน้าที่รับเรื่องและเข้าประเมินจุดเสี่ยง/ขนาดความเสียหาย</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center font-bold">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">รอคิวงาน</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">เริ่มซ่อมแซมพร้อมภาพ</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">ทีมช่างเข้าแก้ไข พร้อมอัปโหลดภาพก่อน-หลังแบบเรียลไทม์</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface font-headline-sm text-headline-sm flex items-center justify-center font-bold">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ปิดเคส</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">ส่งรายงานผลให้ชุมชน</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">ประชาชนตรวจสอบความเรียบร้อยและร่วมให้คะแนนผลงาน</p>
+</div>
+</div>
+</div>
+<!-- Senior Mode Reassurance Footer Banner -->
+<div class="bg-surface-container-highest px-space-lg py-space-md flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-headline-sm text-on-surface">support_agent</span>
+<span class="font-body-md text-body-md">ต้องการความช่วยเหลือเพิ่มเติม? โทรสายด่วนชุมชน: <strong class="text-on-surface font-bold">1555 (ฟรีตลอด 24 ชั่วโมง)</strong></span>
+</div>
+<div class="font-label-sm text-label-sm bg-surface-container-lowest px-space-sm py-1 rounded text-on-surface font-medium">
+          ระบบรายงานชุมชนโปร่งใส 100%
+        </div>
+</div>
+</div>
+<!-- Notification Toast Element -->
+<div class="fixed bottom-6 right-6 bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm px-space-lg py-space-md rounded-xl shadow-xl flex items-center gap-space-sm transition-all duration-300 opacity-0 pointer-events-none translate-y-4 z-50" id="toast-message">
+<span class="material-symbols-outlined text-tertiary text-headline-md" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="" id="toast-text">สำเร็จ</span>
+</div>
+</div>
+</div>
+<script>
+  function showToast(text) {
+    const toast = document.getElementById('toast-message');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+    toastText.innerText = text;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }, 2800);
+  }
+</script></main>
+
+
+</body></html>
